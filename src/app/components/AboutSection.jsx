@@ -5,43 +5,47 @@ import TabButton from "./TabButton";
 
 const TAB_DATA = [
   {
-    title: "Skills",
-    id: "skills",
+    title: "Tech Skills",
+    id: "tech-skills",
     content: (
       <ul className="list-disc pl-2">
-        <li>Node.js</li>
-        <li>Express</li>
-        <li>PostgreSQL</li>
-        <li>Sequelize</li>
-        <li>JavaScript</li>
-        <li>React</li>
+        <li>Linux (Server Administration)</li>
+        <li>Python (Automation)</li>
+        <li>Bash/POSIX Shell (Commandline)</li>
+        <li>Git (Source Version Control)</li>
+        <li>Make (Build System)</li>
       </ul>
     ),
   },
   {
-    title: "Education",
-    id: "education",
+    title: "Programming Languages",
+    id: "languages",
     content: (
       <ul className="list-disc pl-2">
-        <li>Fullstack Academy of Code</li>
-        <li>University of California, Santa Cruz</li>
+        <li>Rust — memory-safe multi-paradigm language</li>
+        <li>C++ — general-purpose language</li>
+        <li>Python — dynamically-typed general-purpose language</li>
+        <li>Java — high-level, class-based, object-oriented language</li>
+        <li>Go — statically typed, compiled high-level language</li>
       </ul>
     ),
   },
   {
-    title: "Certifications",
-    id: "certifications",
+    title: "Cloud Platforms",
+    id: "cloud-platforms",
     content: (
       <ul className="list-disc pl-2">
-        <li>AWS Cloud Practitioner</li>
-        <li>Google Professional Cloud Developer</li>
+        <li>Amazon Web Services (Beginner)</li>
+        <li>Google Cloud Platform (Beginner)</li>
+        <li>Vercel (Beginner)</li>
+        <li>GitHub (Advanced)</li>
       </ul>
     ),
   },
 ];
 
 const AboutSection = () => {
-  const [tab, setTab] = useState("skills");
+  const [tab, setTab] = useState("tech-skills");
   const [isPending, startTransition] = useTransition();
 
   const handleTabChange = (id) => {
@@ -53,38 +57,40 @@ const AboutSection = () => {
   return (
     <section className="text-white" id="about">
       <div className="md:grid md:grid-cols-2 gap-8 items-center py-8 px-4 xl:gap-16 sm:py-16 xl:px-16">
-        <Image src="/images/about-image.png" width={500} height={500} />
+        <Image
+          src="/images/about.jpg"
+          width={512}
+          height={512}
+          alt="about.jpg"
+        />
         <div className="mt-4 md:mt-0 text-left flex flex-col h-full">
           <h2 className="text-4xl font-bold text-white mb-4">About Me</h2>
-          <p className="text-base lg:text-lg">
-            I am a full stack web developer with a passion for creating
-            interactive and responsive web applications. I have experience
-            working with JavaScript, React, Redux, Node.js, Express, PostgreSQL,
-            Sequelize, HTML, CSS, and Git. I am a quick learner and I am always
-            looking to expand my knowledge and skill set. I am a team player and
-            I am excited to work with others to create amazing applications.
+          <p className="text-justify lg:text-lg">
+            Hi! I&apos;m Ark, a dedicated student and programmer with an
+            unwavering passion for libre software. With an insatiable curiosity
+            for technology and a strong commitment to open-source principles.
           </p>
           <div className="flex flex-row justify-start mt-8">
             <TabButton
-              selectTab={() => handleTabChange("skills")}
-              active={tab === "skills"}
+              selectTab={() => handleTabChange("tech-skills")}
+              active={tab === "tech-skills"}
             >
               {" "}
-              Skills{" "}
+              Tech Skills{" "}
             </TabButton>
             <TabButton
-              selectTab={() => handleTabChange("education")}
-              active={tab === "education"}
+              selectTab={() => handleTabChange("languages")}
+              active={tab === "languages"}
             >
               {" "}
-              Education{" "}
+              Programming Languages{" "}
             </TabButton>
             <TabButton
-              selectTab={() => handleTabChange("certifications")}
-              active={tab === "certifications"}
+              selectTab={() => handleTabChange("cloud-platforms")}
+              active={tab === "cloud-platforms"}
             >
               {" "}
-              Certifications{" "}
+              Cloud Platforms{" "}
             </TabButton>
           </div>
           <div className="mt-8">

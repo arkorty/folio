@@ -1,12 +1,18 @@
 # Portfolio Website
 
-This is a portfolio website built with Next.js and Tailwind CSS. It showcases your skills, projects, and achievements in an elegant and responsive design.
+## Getting Started (using [Bun](https://bun.sh/))
 
-## Installation
+### Installation
 
-1. Clone the repository: `git clone https://github.com/judygab/nextjs-portfolio.git`
-2. Navigate to the project directory: `cd portfolio-website`
-3. Install the dependencies: `npm install`
+```bash
+bun install
+```
+
+### Run the development server
+
+```bash
+bun run dev
+```
 
 ## Usage
 
@@ -27,4 +33,3 @@ The following dependencies are required for this project:
 ## License
 
 This project is licensed under the [MIT License](https://opensource.org/licenses/MIT). Feel free to use, modify, and distribute the code as per the terms of the license.
-

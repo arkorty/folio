@@ -11,7 +11,7 @@ const projectsData = [
     description: "AEAD Stream Cipher CLI Tool",
     image: "/images/projects/rustcm-cli.png",
     tag: ["All", "CLI", "Cipher"],
-    gitUrl: "/",
+    gitUrl: "//github.com/arkorty/rustcm-cli",
     previewUrl: "/",
   },
   {
@@ -20,7 +20,7 @@ const projectsData = [
     description: "Lightweight IDE based on Neovim",
     image: "/images/projects/neolite.png",
     tag: ["All", "CLI"],
-    gitUrl: "/",
+    gitUrl: "//github.com/arkorty/neolite",
     previewUrl: "/",
   },
   {
@@ -29,7 +29,7 @@ const projectsData = [
     description: "NextJS Portfolio Landing Page",
     image: "/images/projects/home-directory.png",
     tag: ["All", "Web"],
-    gitUrl: "/",
+    gitUrl: "//github.com/arkorty/home-directory",
     previewUrl: "/",
   },
 ];

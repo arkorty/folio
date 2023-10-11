@@ -41,7 +41,7 @@ const Profile = () => {
           </p>
           <div>
             <Link
-              href="//github.com/arkorty/home-directory.git"
+              href="//github.com/arkorty/home-directory"
               className="mb-3 px-6 inline-block py-3 w-fit sm:w-fit rounded-full mr-4 bg-gradient-to-br from-amber-700 to-red-500 hover:bg-slate-200 text-white"
             >
               Source

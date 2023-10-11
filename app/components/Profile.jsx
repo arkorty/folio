@@ -24,11 +24,11 @@ const Profile = () => {
               sequence={[
                 "Ark",
                 1000,
+                "Student",
+                1000,
+                "Developer",
+                1000,
                 "FOSS Enthusiast",
-                1000,
-                "POSIX Compliant",
-                1000,
-                "Rustacean",
                 1000,
               ]}
               wrapper="span"

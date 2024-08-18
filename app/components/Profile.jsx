@@ -40,19 +40,25 @@ const Profile = () => {
             My $HOME directory on the Interweb.
           </p>
           <div>
-            <Link
-              href="https://github.com/arkorty/folio"
-              className="mb-3 px-6 inline-block py-3 w-fit sm:w-fit rounded-full mr-4 bg-gradient-to-br from-amber-700 to-red-500 hover:bg-slate-200 text-white"
-            >
-              Source
+            <Link href="https://github.com/arkorty/folio" legacyBehavior>
+              <a
+                className="mb-3 px-6 inline-block py-3 w-fit sm:w-fit rounded-full mr-4 bg-gradient-to-br from-amber-700 to-red-500 hover:bg-slate-200 text-white"
+                target="_blank"
+                rel="noopener noreferrer"
+              >
+                Source Code
+              </a>
             </Link>
-            <Link
-              href="https://cv.arkorty.xyz"
-              className="mb-12 px-1 inline-block py-1 w-fit sm:w-fit rounded-full bg-gradient-to-br from-amber-700 to-red-500 hover:bg-slate-800 text-white mt-3"
-            >
-              <span className="block bg-[#121212] hover:bg-slate-800 rounded-full px-5 py-2">
-                Download Resume
-              </span>
+            <Link href="https://cv.webark.in" legacyBehavior>
+              <a
+                className="mb-12 px-1 inline-block py-1 w-fit sm:w-fit rounded-full bg-gradient-to-br from-amber-700 to-red-500 hover:bg-slate-800 text-white mt-3"
+                target="_blank"
+                rel="noopener noreferrer"
+              >
+                <span className="block bg-[#121212] hover:bg-slate-800 rounded-full px-5 py-2">
+                  Download CV
+                </span>
+              </a>
             </Link>
           </div>
         </motion.div>

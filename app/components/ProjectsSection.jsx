@@ -13,7 +13,7 @@ const projectsData = [
     image: "/images/projects/downlink.png",
     tag: ["All", "Web"],
     gitUrl: "https://github.com/arkorty/DownLink",
-    previewUrl: "/",
+    previewUrl: "https://d.webark.in/",
   },
   {
     id: 2,
@@ -23,7 +23,7 @@ const projectsData = [
     image: "/images/projects/reduce.png",
     tag: ["All", "Web"],
     gitUrl: "https://github.com/arkorty/Reduce",
-    previewUrl: "/",
+    previewUrl: "https://r.webark.in/",
   },
   {
     id: 3,
@@ -33,7 +33,7 @@ const projectsData = [
     image: "/images/projects/codeshare.png",
     tag: ["All", "Web"],
     gitUrl: "https://github.com/arkorty/CodeShare",
-    previewUrl: "/",
+    previewUrl: "https://c.webark.in/",
   },
   {
     id: 4,
@@ -42,7 +42,7 @@ const projectsData = [
     image: "/images/projects/rustcm-cli.png",
     tag: ["All", "CLI", "Crypto"],
     gitUrl: "https://github.com/arkorty/rustcm-cli",
-    previewUrl: "/",
+    previewUrl: "",
   },
   {
     id: 5,
@@ -51,7 +51,7 @@ const projectsData = [
     image: "/images/projects/neolite.png",
     tag: ["All", "CLI"],
     gitUrl: "https://github.com/arkorty/neolite",
-    previewUrl: "/",
+    previewUrl: "",
   },
   {
     id: 6,
@@ -60,7 +60,7 @@ const projectsData = [
     image: "/images/projects/arkorty.xyz.png",
     tag: ["All", "Web"],
     gitUrl: "https://github.com/arkorty/arkorty.xyz",
-    previewUrl: "/",
+    previewUrl: "",
   },
   {
     id: 7,
@@ -69,7 +69,7 @@ const projectsData = [
     image: "/images/projects/arithmetic-ast.png",
     tag: ["All", "CLI"],
     gitUrl: "https://github.com/arkorty/arithmetic-ast",
-    previewUrl: "/",
+    previewUrl: "",
   },
 ];
 

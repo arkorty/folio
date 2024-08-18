@@ -30,7 +30,8 @@ const projectsData = [
     title: "CodeShare",
     description:
       "Web-app that allows users to store text snippets and access them easily using a unique 6-letter code.",
-    image: "/images/projects/codeshare.png",
+    image:
+      "https://raw.githubusercontent.com/arkorty/CodeShare/master/blob/codeshare.png",
     tag: ["All", "Web"],
     gitUrl: "https://github.com/arkorty/CodeShare",
     previewUrl: "https://c.webark.in/",

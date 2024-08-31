@@ -1,4 +1,5 @@
 "use client";
+
 import React, { useTransition, useState } from "react";
 import Image from "next/image";
 import TabButton from "./TabButton";
@@ -9,23 +10,33 @@ const TAB_DATA = [
     id: "tech-skills",
     content: (
       <ul className="list-disc pl-4">
-        <li>
-          <strong>Linux & Unix Systems:</strong> Expert in managing and
-          configuring *nix OSes with a focus on security, performance, and
-          automation.
+        <li className="mb-4 text-gray-400">
+          <strong className="text-pink-400 text-xl">
+            Linux & Unix Systems
+          </strong>{" "}
+          Expert in managing and configuring *nix OSes with a focus on security,
+          performance, and automation.
         </li>
-        <li>
-          <strong>Bash & POSIX Shell Scripting:</strong> Advanced scripting
-          capabilities for automation, system administration, and tool creation.
+        <li className="mb-4 text-gray-400">
+          <strong className="text-pink-400 text-xl">
+            Bash & POSIX Shell Scripting
+          </strong>{" "}
+          Advanced scripting capabilities for automation, system administration,
+          and tool creation.
         </li>
-        <li>
-          <strong>Version Control with Git:</strong> Proficient in branching
-          strategies, conflict resolution, and collaborative workflows.
+        <li className="mb-4 text-gray-400">
+          <strong className="text-pink-400 text-xl">
+            Version Control with Git
+          </strong>{" "}
+          Proficient in branching strategies, conflict resolution, and
+          collaborative workflows.
         </li>
-        <li>
-          <strong>Build Systems & CI/CD:</strong> Intermediate experience in
-          setting up and maintaining build pipelines using tools like Make,
-          CMake, and Jenkins.
+        <li className="mb-4 text-gray-400">
+          <strong className="text-pink-400 text-xl">
+            Build Systems & CI/CD
+          </strong>{" "}
+          Intermediate experience in setting up and maintaining build pipelines
+          using tools like Make, CMake, and Jenkins.
         </li>
       </ul>
     ),
@@ -35,27 +46,22 @@ const TAB_DATA = [
     id: "languages",
     content: (
       <ul className="list-disc pl-4">
-        <li>
-          <strong>Rust:</strong> Intermediate knowledge with a focus on systems
-          programming and memory-safe code.
+        <li className="mb-4 text-gray-400">
+          <strong className="text-pink-400 text-xl">Rust</strong> Intermediate
+          knowledge with a focus on systems programming and memory-safe code.
         </li>
-        <li>
-          <strong>C++:</strong> Intermediate experience in writing
-          high-performance code and understanding of core concepts like OOP,
-          STL, and memory management.
+        <li className="mb-4 text-gray-400">
+          <strong className="text-pink-400 text-xl">C++</strong> Intermediate
+          experience in writing high-performance code and understanding of core
+          concepts like OOP, STL, and memory management.
         </li>
-        <li>
-          <strong>Python:</strong> Advanced proficiency in scripting,
-          automation, data analysis, and backend development.
+        <li className="mb-4 text-gray-400">
+          <strong className="text-pink-400 text-xl">JavaScript</strong> Have
+          some experience building full-stack web apps.
         </li>
-        <li>
-          <strong>Java:</strong> Advanced in building scalable applications,
-          with strong understanding of OOP principles, multithreading, and the
-          JVM ecosystem.
-        </li>
-        <li>
-          <strong>Go:</strong> Beginner-level experience with a focus on
-          building simple and efficient concurrent programs.
+        <li className="mb-4 text-gray-400">
+          <strong className="text-pink-400 text-xl">Go</strong> Beginner-level
+          experience with a focus on building simple and efficient backends.
         </li>
       </ul>
     ),
@@ -65,24 +71,24 @@ const TAB_DATA = [
     id: "cloud-platforms",
     content: (
       <ul className="list-disc pl-4">
-        <li>
-          <strong>Amazon Web Services (AWS):</strong> Beginner experience with
-          deploying and managing applications using core services like EC2, S3,
-          and Lambda.
+        <li className="mb-4 text-gray-400">
+          <strong className="text-pink-400 text-xl">AWS</strong> Have experience
+          deploying nginx reverse proxies, containerized backends and Nextcloud
+          instances using services like EC2 & S3.
         </li>
-        <li>
-          <strong>Google Cloud Platform (GCP):</strong> Beginner knowledge in
-          using GCP tools for cloud infrastructure, primarily focusing on
-          Compute Engine and Cloud Functions.
+        <li className="mb-4 text-gray-400">
+          <strong className="text-pink-400 text-xl">Oracle Cloud</strong>{" "}
+          Beginner knowledge in using Compute Engine and Scalable Storage.
         </li>
-        <li>
-          <strong>Vercel:</strong> Beginner experience deploying frontend
-          applications with seamless integration of CI/CD for Next.js projects.
+        <li className="mb-4 text-gray-400">
+          <strong className="text-pink-400 text-xl">Vercel</strong> Beginner
+          experience deploying frontend applications with seamless integration
+          of CI/CD for Next.js projects.
         </li>
-        <li>
-          <strong>GitHub:</strong> Advanced use of GitHub features for
-          collaborative development, automation via Actions, and repository
-          management.
+        <li className="mb-4 text-gray-400">
+          <strong className="text-pink-400 text-xl">GitHub</strong> Advanced use
+          of GitHub features for collaborative development, automation via
+          Actions, and repository management.
         </li>
       </ul>
     ),
@@ -111,14 +117,10 @@ const AboutSection = () => {
         <div className="mt-4 md:mt-0 text-left flex flex-col h-full">
           <h2 className="text-4xl font-bold text-white mb-4">About Me</h2>
           <p className="text-justify lg:text-lg">
-            Hi! I&apos;m Ark, a passionate programmer with a deep love for libre
-            software and open-source principles. My curiosity drives me to
-            constantly explore and innovate in the tech world. I have a
-            particular obsession with the command-line, Linux distributions, and
-            the intricacies of the software audio and display stacks like
-            Wayland and PipeWire. From system customization to performance
-            tuning, I enjoy diving deep into the details that make software
-            efficient, flexible, and accessible.
+            Hey! I&apos;m Ark, a programmer who loves open-source and tinkering
+            with Linux. I&apos;m all about the command line, customizing
+            systems, and getting into the nitty-gritty details. I enjoy making
+            tech efficient, flexible, and accessible.
           </p>
           <div className="flex flex-row justify-start mt-8">
             <TabButton
@@ -126,21 +128,21 @@ const AboutSection = () => {
               active={tab === "tech-skills"}
             >
               {" "}
-              Tech Skills{" "}
+              Skills{" "}
             </TabButton>
             <TabButton
               selectTab={() => handleTabChange("languages")}
               active={tab === "languages"}
             >
               {" "}
-              Programming Languages{" "}
+              Languages{" "}
             </TabButton>
             <TabButton
               selectTab={() => handleTabChange("cloud-platforms")}
               active={tab === "cloud-platforms"}
             >
               {" "}
-              Cloud Platforms{" "}
+              Cloud{" "}
             </TabButton>
           </div>
           <div className="mt-8">

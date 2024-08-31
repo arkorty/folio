@@ -9,7 +9,7 @@ const projectsData = [
     id: 1,
     title: "DownLink",
     description:
-      "Web-app that allows users to download videos from YouTube and Instagram via a simple interface.",
+      "Download HD videos from YouTube and Instagram via a simple interface.",
     image: "/images/projects/downlink.png",
     tag: ["All", "Web"],
     gitUrl: "https://github.com/arkorty/DownLink",
@@ -18,8 +18,7 @@ const projectsData = [
   {
     id: 2,
     title: "Reduce",
-    description:
-      "URL shortening service that allows users to easily shorten long URLs for easy access and sharing.",
+    description: "Shorten long URLs for easy access and sharing.",
     image: "/images/projects/reduce.png",
     tag: ["All", "Web"],
     gitUrl: "https://github.com/arkorty/Reduce",
@@ -29,7 +28,7 @@ const projectsData = [
     id: 3,
     title: "CodeShare",
     description:
-      "Web-app that allows users to store text snippets and access them easily using a unique 6-letter code.",
+      "Store and share code snippets easily using a unique 6-letter code.",
     image:
       "https://raw.githubusercontent.com/arkorty/CodeShare/master/blob/codeshare.png",
     tag: ["All", "Web"],
@@ -39,7 +38,7 @@ const projectsData = [
   {
     id: 4,
     title: "RUSTCM-CLI",
-    description: "UTF-8 Streaming Text Cipher using XChaCha20-Poly1305.",
+    description: "UTF-8 text cipher using XChaCha20-Poly1305.",
     image: "/images/projects/rustcm-cli.png",
     tag: ["All", "CLI", "Crypto"],
     gitUrl: "https://github.com/arkorty/rustcm-cli",

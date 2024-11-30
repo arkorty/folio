@@ -10,16 +10,18 @@ const projectsData = [
     title: "DownLink",
     description:
       "Download HD videos from YouTube and Instagram via a simple interface.",
-    image: "/images/projects/downlink.png",
+    image:
+      "https://github.com/arkorty/DownLink/blob/master/blob/cover.png?raw=true",
     tag: ["All", "Web"],
     gitUrl: "https://github.com/arkorty/DownLink",
-    previewUrl: "https://d.webark.in/",
+    previewUrl: "https://downlink.webark.in/",
   },
   {
     id: 2,
     title: "Reduce",
     description: "Shorten long URLs for easy access and sharing.",
-    image: "/images/projects/reduce.png",
+    image:
+      "https://github.com/arkorty/Reduce/blob/master/blob/cover.png?raw=true",
     tag: ["All", "Web"],
     gitUrl: "https://github.com/arkorty/Reduce",
     previewUrl: "https://r.webark.in/",
@@ -30,45 +32,39 @@ const projectsData = [
     description:
       "Store and share code snippets easily using a unique 6-letter code.",
     image:
-      "https://raw.githubusercontent.com/arkorty/CodeShare/master/blob/codeshare.png",
+      "https://github.com/arkorty/CodeShare/blob/master/blob/cover.png?raw=true",
     tag: ["All", "Web"],
     gitUrl: "https://github.com/arkorty/CodeShare",
-    previewUrl: "https://c.webark.in/",
+    previewUrl: "https://codeshare.webark.in/",
   },
   {
     id: 4,
     title: "RUSTCM-CLI",
     description: "UTF-8 text cipher using XChaCha20-Poly1305.",
-    image: "/images/projects/rustcm-cli.png",
+    image:
+      "https://github.com/arkorty/rustcm-cli/blob/master/blob/cover.png?raw=true",
     tag: ["All", "CLI", "Crypto"],
     gitUrl: "https://github.com/arkorty/rustcm-cli",
     previewUrl: "",
   },
   {
     id: 5,
-    title: "NEOLITE",
+    title: "Neolite",
     description: "Lightweight IDE based on Neovim.",
-    image: "/images/projects/neolite.png",
+    image:
+      "https://github.com/arkorty/Neolite/blob/master/blob/cover.png?raw=true",
     tag: ["All", "CLI"],
     gitUrl: "https://github.com/arkorty/neolite",
     previewUrl: "",
   },
   {
-    id: 6,
-    title: "folio",
-    description: "Website to showcase projects and skills.",
-    image: "/images/projects/arkorty.xyz.png",
-    tag: ["All", "Web"],
-    gitUrl: "https://github.com/arkorty/arkorty.xyz",
-    previewUrl: "",
-  },
-  {
     id: 7,
-    title: "Arithmetic AST",
+    title: "ExprEval++",
     description: "AST implementation via OOP in C++",
-    image: "/images/projects/arithmetic-ast.png",
+    image:
+      "https://github.com/arkorty/ExprEvalplusplus/blob/master/blob/cover.png?raw=true",
     tag: ["All", "CLI"],
-    gitUrl: "https://github.com/arkorty/arithmetic-ast",
+    gitUrl: "https://github.com/arkorty/ExprEvalplusplus",
     previewUrl: "",
   },
 ];
@@ -83,7 +79,7 @@ const ProjectsSection = () => {
   };
 
   const filteredProjects = projectsData.filter((project) =>
-    project.tag.includes(tag),
+    project.tag.includes(tag)
   );
 
   const cardVariants = {

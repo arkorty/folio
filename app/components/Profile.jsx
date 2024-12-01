@@ -74,7 +74,7 @@ const Profile = () => {
           className="col-span-4 place-self-center mt-4 lg:mt-0"
         >
           <div className="rounded-full relative mx-auto bg-gradient-to-r from-amber-500 to-red-500 lg: w-96 h-96 overflow-hidden">
-            <Image src="/pfp.png" alt="avatar" fill="true" />
+            <Image src="/avatar.png" alt="avatar" sizes="512px" fill="true" />
           </div>
         </motion.div>
       </div>

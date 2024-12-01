@@ -6,6 +6,13 @@ import { motion } from "framer-motion";
 import Link from "next/link";
 
 const Profile = () => {
+  const handleResumeDownload = () => {
+    const link = document.createElement("a");
+    link.href = "/A.Chakraborty-Resume-SDE.pdf";
+    link.download = "A.Chakraborty-Resume-SDE.pdf";
+    link.click();
+  };
+
   return (
     <section className="lg:py-16">
       <div className="grid grid-cols-1 sm:grid-cols-12">
@@ -49,17 +56,14 @@ const Profile = () => {
                 Source Code
               </a>
             </Link>
-            <Link href="https://cv.webark.in" legacyBehavior>
-              <a
-                className="mb-12 px-1 inline-block py-1 w-fit sm:w-fit rounded-full bg-gradient-to-br from-amber-700 to-red-500 hover:bg-slate-800 text-white mt-3"
-                target="_blank"
-                rel="noopener noreferrer"
-              >
-                <span className="block bg-[#121212] hover:bg-slate-800 rounded-full px-5 py-2">
-                  Download CV
-                </span>
-              </a>
-            </Link>
+            <button
+              onClick={handleResumeDownload}
+              className="mb-12 px-1 inline-block py-1 w-fit sm:w-fit rounded-full bg-gradient-to-br from-amber-700 to-red-500 hover:bg-slate-800 text-white mt-3"
+            >
+              <span className="block bg-[#121212] hover:bg-slate-800 rounded-full px-5 py-2">
+                Resume
+              </span>
+            </button>
           </div>
         </motion.div>
         <motion.div

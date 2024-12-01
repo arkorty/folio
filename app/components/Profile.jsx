@@ -8,8 +8,9 @@ import Link from "next/link";
 const Profile = () => {
   const handleResumeDownload = () => {
     const link = document.createElement("a");
-    link.href = "/A.Chakraborty-Resume-SDE.pdf";
-    link.download = "A.Chakraborty-Resume-SDE.pdf";
+    const filename = "A.Chakraborty-Resume-SDE.pdf";
+    link.href = "/resume/" + filename;
+    link.download = filename;
     link.click();
   };
 

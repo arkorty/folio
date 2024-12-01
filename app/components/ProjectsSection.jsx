@@ -92,7 +92,7 @@ const projectsData = [
     description: "Health risk prediction using machine learning",
     image:
       "https://github.com/arkorty/PrognosAI/blob/master/blob/cover.jpg?raw=true",
-    tag: ["All", "AI", "Machine Learning"],
+    tag: ["All", "ML"],
     gitUrl: "https://github.com/arkorty/PrognosAI",
     previewUrl: "",
   },

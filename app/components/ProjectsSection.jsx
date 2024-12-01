@@ -7,40 +7,19 @@ import { motion, useInView } from "framer-motion";
 const projectsData = [
   {
     id: 1,
-    title: "DownLink",
-    description:
-      "Download HD videos from YouTube and Instagram via a simple interface.",
+    title: "BoostStats",
+    description: "Track cohort progress on Google Cloud Skills Boost platform",
     image:
-      "https://github.com/arkorty/DownLink/blob/master/blob/cover.png?raw=true",
+      "https://github.com/arkorty/booststats-frontend/blob/master/public/og-image.png?raw=true",
     tag: ["All", "Web"],
-    gitUrl: "https://github.com/arkorty/DownLink",
-    previewUrl: "https://downlink.webark.in/",
+    gitUrl: "https://github.com/arkorty/BoostStats",
+    previewUrl: "https://booststats.webark.in/",
   },
   {
     id: 2,
-    title: "Reduce",
-    description: "Shorten long URLs for easy access and sharing.",
-    image:
-      "https://github.com/arkorty/Reduce/blob/master/blob/cover.png?raw=true",
-    tag: ["All", "Web"],
-    gitUrl: "https://github.com/arkorty/Reduce",
-    previewUrl: "https://r.webark.in/",
-  },
-  {
-    id: 3,
-    title: "CodeShare",
-    description:
-      "Store and share code snippets easily using a unique 6-letter code.",
-    image:
-      "https://github.com/arkorty/CodeShare/blob/master/blob/cover.png?raw=true",
-    tag: ["All", "Web"],
-    gitUrl: "https://github.com/arkorty/CodeShare",
-    previewUrl: "https://codeshare.webark.in/",
-  },
-  {
-    id: 4,
     title: "RUSTCM-CLI",
-    description: "UTF-8 text cipher using XChaCha20-Poly1305.",
+    description:
+      "Authenticated cipher using XChaCha20-Poly1305 in the command-line",
     image:
       "https://github.com/arkorty/rustcm-cli/blob/master/blob/cover.png?raw=true",
     tag: ["All", "CLI", "Crypto"],
@@ -48,23 +27,73 @@ const projectsData = [
     previewUrl: "",
   },
   {
-    id: 5,
-    title: "Neolite",
-    description: "Lightweight IDE based on Neovim.",
+    id: 3,
+    title: "DownLink",
+    description: "Download videos from YouTube and Instagram",
     image:
-      "https://github.com/arkorty/Neolite/blob/master/blob/cover.png?raw=true",
-    tag: ["All", "CLI"],
-    gitUrl: "https://github.com/arkorty/neolite",
-    previewUrl: "",
+      "https://github.com/arkorty/DownLink/blob/master/blob/cover.png?raw=true",
+    tag: ["All", "Web"],
+    gitUrl: "https://github.com/arkorty/DownLink",
+    previewUrl: "https://downlink.webark.in/",
+  },
+  {
+    id: 4,
+    title: "Room",
+    description: "Multi-user room-based text editor",
+    image:
+      "https://github.com/arkorty/room-client/blob/main/public/og-image.png?raw=true",
+    tag: ["All", "Web"],
+    gitUrl: "https://github.com/arkorty/Room",
+    previewUrl: "https://room.webark.in/",
+  },
+  {
+    id: 5,
+    title: "CodeShare",
+    description: "Share code snippets easily with syntax highlights",
+    image:
+      "https://github.com/arkorty/CodeShare/blob/master/blob/cover.png?raw=true",
+    tag: ["All", "Web"],
+    gitUrl: "https://github.com/arkorty/CodeShare",
+    previewUrl: "https://codeshare.webark.in/",
+  },
+  {
+    id: 6,
+    title: "Reduce",
+    description: "URL shortner with QR code",
+    image:
+      "https://github.com/arkorty/Reduce/blob/master/blob/cover.png?raw=true",
+    tag: ["All", "Web"],
+    gitUrl: "https://github.com/arkorty/Reduce",
+    previewUrl: "https://r.webark.in/",
   },
   {
     id: 7,
     title: "ExprEval++",
-    description: "AST implementation via OOP in C++",
+    description: "Expression evaluator written in C++",
     image:
       "https://github.com/arkorty/ExprEvalplusplus/blob/master/blob/cover.png?raw=true",
     tag: ["All", "CLI"],
     gitUrl: "https://github.com/arkorty/ExprEvalplusplus",
+    previewUrl: "",
+  },
+  {
+    id: 8,
+    title: "Neolite",
+    description: "IDE-like Neovim distro with Copilot",
+    image:
+      "https://github.com/arkorty/Neolite/blob/master/blob/cover.png?raw=true",
+    tag: ["All", "CLI"],
+    gitUrl: "https://github.com/arkorty/Neolite",
+    previewUrl: "",
+  },
+  {
+    id: 9,
+    title: "PrognosAI",
+    description: "Health risk prediction using machine learning",
+    image:
+      "https://github.com/arkorty/PrognosAI/blob/master/blob/cover.jpg?raw=true",
+    tag: ["All", "AI", "Machine Learning"],
+    gitUrl: "https://github.com/arkorty/PrognosAI",
     previewUrl: "",
   },
 ];
@@ -112,6 +141,11 @@ const ProjectsSection = () => {
           onClick={handleTagChange}
           name="Crypto"
           isSelected={tag === "Crypto"}
+        />
+        <ProjectTag
+          onClick={handleTagChange}
+          name="AI"
+          isSelected={tag === "AI"}
         />
       </div>
       <ul ref={ref} className="grid md:grid-cols-3 gap-8 md:gap-12">

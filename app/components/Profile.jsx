@@ -30,13 +30,13 @@ const Profile = () => {
             <br></br>
             <TypeAnimation
               sequence={[
-                "Ark",
+                "Arka",
                 1000,
-                "Student",
+                "a Student",
                 1000,
-                "Developer",
+                "a Developer",
                 1000,
-                "FOSS Enthusiast",
+                "a FOSS Advocate",
                 1000,
               ]}
               wrapper="span"
@@ -48,13 +48,13 @@ const Profile = () => {
             My $HOME directory on the Interweb.
           </p>
           <div>
-            <Link href="https://github.com/arkorty/folio" legacyBehavior>
+            <Link href="mailto:arkorty@gmail.com" legacyBehavior>
               <a
                 className="mb-3 px-6 inline-block py-3 w-fit sm:w-fit rounded-full mr-4 bg-gradient-to-br from-amber-700 to-red-500 hover:bg-slate-200 text-white"
                 target="_blank"
                 rel="noopener noreferrer"
               >
-                Source Code
+                Send an Email
               </a>
             </Link>
             <button
@@ -62,7 +62,7 @@ const Profile = () => {
               className="mb-12 px-1 inline-block py-1 w-fit sm:w-fit rounded-full bg-gradient-to-br from-amber-700 to-red-500 hover:bg-slate-800 text-white mt-3"
             >
               <span className="block bg-[#121212] hover:bg-slate-800 rounded-full px-5 py-2">
-                Download Resume
+                Get My Resume
               </span>
             </button>
           </div>

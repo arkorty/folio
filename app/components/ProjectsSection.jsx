@@ -11,7 +11,7 @@ const projectsData = [
     description: "Track cohort progress on Google Cloud Skills Boost platform",
     image:
       "https://github.com/arkorty/booststats-frontend/blob/master/public/og-image.png?raw=true",
-    tag: ["All", "Web"],
+    tag: ["Web"],
     gitUrl: "https://github.com/arkorty/BoostStats",
     previewUrl: "https://booststats.webark.in/",
   },
@@ -22,7 +22,7 @@ const projectsData = [
       "Authenticated cipher using XChaCha20-Poly1305 in the command-line",
     image:
       "https://github.com/arkorty/rustcm-cli/blob/master/blob/cover.png?raw=true",
-    tag: ["All", "CLI", "Crypto"],
+    tag: ["CLI", "Crypto"],
     gitUrl: "https://github.com/arkorty/rustcm-cli",
     previewUrl: "",
   },
@@ -32,7 +32,7 @@ const projectsData = [
     description: "Download videos from YouTube and Instagram",
     image:
       "https://github.com/arkorty/DownLink/blob/master/blob/cover.png?raw=true",
-    tag: ["All", "Web"],
+    tag: ["Web"],
     gitUrl: "https://github.com/arkorty/DownLink",
     previewUrl: "https://downlink.webark.in/",
   },
@@ -42,7 +42,7 @@ const projectsData = [
     description: "Multi-user room-based text editor",
     image:
       "https://github.com/arkorty/room-client/blob/main/public/og-image.png?raw=true",
-    tag: ["All", "Web"],
+    tag: ["Web"],
     gitUrl: "https://github.com/arkorty/Room",
     previewUrl: "https://room.webark.in/",
   },
@@ -52,7 +52,7 @@ const projectsData = [
     description: "Share code snippets easily with syntax highlights",
     image:
       "https://github.com/arkorty/CodeShare/blob/master/blob/cover.png?raw=true",
-    tag: ["All", "Web"],
+    tag: ["Web"],
     gitUrl: "https://github.com/arkorty/CodeShare",
     previewUrl: "https://codeshare.webark.in/",
   },
@@ -62,7 +62,7 @@ const projectsData = [
     description: "URL shortner with QR code",
     image:
       "https://github.com/arkorty/Reduce/blob/master/blob/cover.png?raw=true",
-    tag: ["All", "Web"],
+    tag: ["Web"],
     gitUrl: "https://github.com/arkorty/Reduce",
     previewUrl: "https://r.webark.in/",
   },
@@ -72,7 +72,7 @@ const projectsData = [
     description: "Expression evaluator written in C++",
     image:
       "https://github.com/arkorty/ExprEvalplusplus/blob/master/blob/cover.png?raw=true",
-    tag: ["All", "CLI"],
+    tag: ["CLI"],
     gitUrl: "https://github.com/arkorty/ExprEvalplusplus",
     previewUrl: "",
   },
@@ -82,7 +82,7 @@ const projectsData = [
     description: "IDE-like Neovim distro with Copilot",
     image:
       "https://github.com/arkorty/Neolite/blob/master/blob/cover.png?raw=true",
-    tag: ["All", "CLI"],
+    tag: ["CLI"],
     gitUrl: "https://github.com/arkorty/Neolite",
     previewUrl: "",
   },
@@ -92,24 +92,25 @@ const projectsData = [
     description: "Health risk prediction using machine learning",
     image:
       "https://github.com/arkorty/PrognosAI/blob/master/blob/cover.jpg?raw=true",
-    tag: ["All", "ML"],
+    tag: ["ML"],
     gitUrl: "https://github.com/arkorty/PrognosAI",
     previewUrl: "",
   },
 ];
 
 const ProjectsSection = () => {
-  const [tag, setTag] = useState("All");
+  const [activeTag, setActiveTag] = useState("");
   const ref = useRef(null);
   const isInView = useInView(ref, { once: true });
 
-  const handleTagChange = (newTag) => {
-    setTag(newTag);
+  const handleTagChange = (selectedTag) => {
+    setActiveTag((prevTag) => (prevTag === selectedTag ? "" : selectedTag));
   };
 
-  const filteredProjects = projectsData.filter((project) =>
-    project.tag.includes(tag)
-  );
+  const filteredProjects =
+    activeTag === ""
+      ? projectsData
+      : projectsData.filter((project) => project.tag.includes(activeTag));
 
   const cardVariants = {
     initial: { y: 50, opacity: 0 },
@@ -123,29 +124,24 @@ const ProjectsSection = () => {
       </h2>
       <div className="text-white flex flex-row justify-center items-center gap-2 py-6">
         <ProjectTag
-          onClick={handleTagChange}
-          name="All"
-          isSelected={tag === "All"}
-        />
-        <ProjectTag
-          onClick={handleTagChange}
+          onClick={() => handleTagChange("Web")}
           name="Web"
-          isSelected={tag === "Web"}
+          isSelected={activeTag === "Web"}
         />
         <ProjectTag
-          onClick={handleTagChange}
+          onClick={() => handleTagChange("CLI")}
           name="CLI"
-          isSelected={tag === "CLI"}
+          isSelected={activeTag === "CLI"}
         />
         <ProjectTag
-          onClick={handleTagChange}
+          onClick={() => handleTagChange("Crypto")}
           name="Crypto"
-          isSelected={tag === "Crypto"}
+          isSelected={activeTag === "Crypto"}
         />
         <ProjectTag
-          onClick={handleTagChange}
-          name="AI"
-          isSelected={tag === "AI"}
+          onClick={() => handleTagChange("ML")}
+          name="ML"
+          isSelected={activeTag === "ML"}
         />
       </div>
       <ul ref={ref} className="grid md:grid-cols-3 gap-8 md:gap-12">
@@ -155,7 +151,7 @@ const ProjectsSection = () => {
             variants={cardVariants}
             initial="initial"
             animate={isInView ? "animate" : "initial"}
-            transition={{ duration: 0.3, delay: index * 0.4 }}
+            transition={{ duration: 0.2, delay: index * 0.2 }}
           >
             <ProjectCard
               key={project.id}

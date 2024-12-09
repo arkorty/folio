@@ -1,4 +1,6 @@
-import React from "react";
+"use client";
+
+import React, { useState } from "react";
 import GithubIcon from "../../public/github-icon.svg";
 import LinkedinIcon from "../../public/linkedin-icon.svg";
 import LeetCodeIcon from "../../public/leetcode-icon.svg";
@@ -6,6 +8,49 @@ import Link from "next/link";
 import Image from "next/image";
 
 const EmailSection = () => {
+  const [formData, setFormData] = useState({
+    email: "",
+    subject: "",
+    message: "",
+  });
+  const [status, setStatus] = useState("");
+
+  const handleChange = (e) => {
+    const { name, value } = e.target;
+    setFormData((prevData) => ({
+      ...prevData,
+      [name]: value,
+    }));
+  };
+
+  const handleSubmit = async (e) => {
+    e.preventDefault();
+    const { email, subject, message } = formData;
+
+    if (!email || !subject || !message) {
+      setStatus("Error");
+      return;
+    }
+
+    try {
+      const response = await fetch("/api/send-email", {
+        method: "POST",
+        headers: {
+          "Content-Type": "application/json",
+        },
+        body: JSON.stringify(formData),
+      });
+
+      if (response.ok) {
+        setStatus("Success");
+      } else {
+        setStatus("Error");
+      }
+    } catch {
+      setStatus("Error");
+    }
+  };
+
   return (
     <section
       id="contact"
@@ -17,55 +62,63 @@ const EmailSection = () => {
           Let&apos;s Connect
         </h5>
         <p className="text-[#ADB7BE] text-justify mb-4 max-w-md">
-          {" "}
-          Hey there! I noticed your interest for programming and development,
-          and I&apos;d love to connect with fellow tech enthusiasts. Let&apos;s
-          exchange ideas, share projects, and learn together. Feel free to reach
-          out anytime! You can find me on{" "}
-          <a className="text-blue-400" href="//github.com/arkorty">
+          I’m super excited to connect with fellow tech enthusiasts! 🚀 I’m
+          always eager to share ideas, collaborate on projects, and learn
+          together in the world of programming and development. Let’s inspire
+          each other and grow as a community! Don’t hesitate to reach out
+          anytime—whether it’s for a chat, to share something cool, or just to
+          connect. You can find me on{" "}
+          <a className="text-blue-400" href="https://github.com/arkorty">
             GitHub
           </a>
           ,{" "}
-          <a className="text-white" href="//x.com/arkorty">
+          <a className="text-white" href="https://x.com/arkorty">
             X.com
           </a>
           ,{" "}
-          <a className="text-sky-400" href="//linkedin.com/in/arkorty">
-            Linkedin
+          <a className="text-sky-400" href="https://linkedin.com/in/arkorty">
+            LinkedIn
           </a>{" "}
           and{" "}
-          <a className="text-purple-400" href="//mastodon.social/@arkorty">
+          <a
+            className="text-purple-400"
+            href="https://mastodon.social/@arkorty"
+          >
             Mastodon
           </a>
           .
         </p>
+
         <div className="socials flex flex-row gap-2">
-          <Link href="//github.com/arkorty">
+          <Link href="https://github.com/arkorty">
             <Image src={GithubIcon} alt="Github Icon" />
           </Link>
-          <Link href="//linkedin.com/in/arkorty">
+          <Link href="https://linkedin.com/in/arkorty">
             <Image src={LinkedinIcon} alt="Linkedin Icon" />
           </Link>
-          <Link href="//leetcode.com/arkorty">
+          <Link href="https://leetcode.com/arkorty">
             <Image src={LeetCodeIcon} alt="LeetCode Icon" />
           </Link>
         </div>
       </div>
       <div className="z-10">
-        <form className="flex flex-col">
+        <form className="flex flex-col" onSubmit={handleSubmit}>
           <div className="mb-6">
             <label
               htmlFor="email"
               className="text-white block mb-2 text-sm font-medium"
             >
-              Your email
+              Send Me an Email
             </label>
             <input
               type="email"
               id="email"
+              name="email"
               required
+              value={formData.email}
+              onChange={handleChange}
               className="bg-[#18191E] border border-[#33353F] placeholder-[#9CA2A9] text-gray-100 text-sm rounded-lg block w-full p-2.5"
-              placeholder="john.doe@example.com"
+              placeholder="your.email@example.com"
             />
           </div>
           <div className="mb-6">
@@ -78,9 +131,12 @@ const EmailSection = () => {
             <input
               type="text"
               id="subject"
+              name="subject"
               required
+              value={formData.subject}
+              onChange={handleChange}
               className="bg-[#18191E] border border-[#33353F] placeholder-[#9CA2A9] text-gray-100 text-sm rounded-lg block w-full p-2.5"
-              placeholder="subject"
+              placeholder="Subject"
             />
           </div>
           <div className="mb-6">
@@ -93,13 +149,21 @@ const EmailSection = () => {
             <textarea
               name="message"
               id="message"
+              value={formData.message}
+              onChange={handleChange}
               className="bg-[#18191E] border border-[#33353F] placeholder-[#9CA2A9] text-gray-100 text-sm rounded-lg block w-full p-2.5"
-              placeholder="message"
+              placeholder="Message"
             />
           </div>
           <button
             type="submit"
-            className="bg-amber-500 hover:bg-amber-600 text-white font-medium py-2.5 px-5 rounded-lg w-full"
+            className={`font-medium py-2.5 px-5 rounded-lg w-full ${
+              status === "Success"
+                ? "bg-green-500 hover:bg-green-600"
+                : status === "Error"
+                ? "bg-red-500 hover:bg-red-600"
+                : "bg-amber-500 hover:bg-amber-600"
+            }`}
           >
             Send Message
           </button>

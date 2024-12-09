@@ -54,7 +54,7 @@ const Profile = () => {
                 target="_blank"
                 rel="noopener noreferrer"
               >
-                Send an Email
+                Hire Me
               </a>
             </Link>
             <button

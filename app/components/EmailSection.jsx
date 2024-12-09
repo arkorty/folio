@@ -62,22 +62,14 @@ const EmailSection = () => {
           Let&apos;s Connect
         </h5>
         <p className="text-[#ADB7BE] text-justify mb-4 max-w-md">
-          I’m super excited to connect with fellow tech enthusiasts! 🚀 I’m
-          always eager to share ideas, collaborate on projects, and learn
-          together in the world of programming and development. Let’s inspire
-          each other and grow as a community! Don’t hesitate to reach out
-          anytime—whether it’s for a chat, to share something cool, or just to
-          connect. You can find me on{" "}
-          <a className="text-blue-400" href="https://github.com/arkorty">
-            GitHub
-          </a>
-          ,{" "}
+          I’m super excited to connect with fellow tech enthusiasts! 🚀 Always
+          eager to share ideas, collaborate on projects, and learn together in
+          the world of programming and development. Let’s inspire each other and
+          grow as a community! Feel free to reach out—whether for a chat, to
+          share something cool, or just to connect. You can find me on social
+          media sites like{" "}
           <a className="text-white" href="https://x.com/arkorty">
-            X.com
-          </a>
-          ,{" "}
-          <a className="text-sky-400" href="https://linkedin.com/in/arkorty">
-            LinkedIn
+            X
           </a>{" "}
           and{" "}
           <a
@@ -161,8 +153,8 @@ const EmailSection = () => {
               status === "Success"
                 ? "bg-green-500 hover:bg-green-600"
                 : status === "Error"
-                ? "bg-red-500 hover:bg-red-600"
-                : "bg-amber-500 hover:bg-amber-600"
+                  ? "bg-red-500 hover:bg-red-600"
+                  : "bg-amber-500 hover:bg-amber-600"
             }`}
           >
             Send Message

@@ -5,7 +5,7 @@ const inter = Inter({ subsets: ["latin"] });
 
 export const metadata = {
   title: "folio - WebArk",
-  description: "A Webark Portfolio Website",
+  description: "A WebArk Portfolio Website",
 };
 
 export default function RootLayout({ children }) {

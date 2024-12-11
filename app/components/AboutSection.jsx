@@ -108,7 +108,7 @@ const AboutSection = () => {
         <div className="mt-4 md:mt-0 text-left flex flex-col h-full">
           <h2 className="text-4xl font-bold text-white mb-4">About Me</h2>
           <p className="text-justify lg:text-lg">
-            Hey! I&apos;m Ark, a programmer who loves open-source and tinkering
+            Hey! I&apos;m Arka, a programmer who loves open-source and tinkering
             with Linux. I&apos;m all about the command line, customizing
             systems, and getting into the nitty-gritty details. I enjoy making
             tech efficient, flexible, and accessible.

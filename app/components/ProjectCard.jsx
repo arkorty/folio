@@ -9,10 +9,11 @@ const ProjectCard = ({ imgUrl, title, description, gitUrl, previewUrl }) => {
       <div className="relative group w-full aspect-[1200/630]">
         <Image
           src={imgUrl}
-          alt="Background Image"
+          alt="Cover Image"
           layout="fill"
           objectFit="cover"
           className="rounded-t-xl"
+          priority
         />
         <div className="overlay items-center justify-center absolute top-0 left-0 w-full h-full bg-[#181818] bg-opacity-0 hidden group-hover:flex group-hover:bg-opacity-80 transition-all duration-500">
           <Link href={gitUrl} legacyBehavior>

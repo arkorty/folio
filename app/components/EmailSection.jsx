@@ -62,23 +62,23 @@ const EmailSection = () => {
           Let&apos;s Connect
         </h5>
         <p className="text-[#ADB7BE] text-justify mb-4 max-w-md">
-          I’m super excited to connect with fellow tech enthusiasts! 🚀 Always
+          I’m super excited to connect with fellow tech enthusiasts! Always
           eager to share ideas, collaborate on projects, and learn together in
           the world of programming and development. Let’s inspire each other and
           grow as a community! Feel free to reach out—whether for a chat, to
           share something cool, or just to connect. You can find me on social
           media sites like{" "}
-          <a className="text-white" href="https://x.com/arkorty">
-            X
-          </a>{" "}
-          and{" "}
+          <a className="text-blue-400" href="https://x.com/arkorty">
+            X (formerly Twitter)
+          </a>
+          ,{" "}
           <a
             className="text-purple-400"
             href="https://mastodon.social/@arkorty"
           >
             Mastodon
-          </a>
-          .
+          </a>{" "}
+          or the platforms listed below.
         </p>
 
         <div className="socials flex flex-row gap-2">

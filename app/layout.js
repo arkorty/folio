@@ -4,7 +4,7 @@ import { Inter } from "next/font/google";
 const inter = Inter({ subsets: ["latin"] });
 
 export const metadata = {
-  title: "folio - WebArk",
+  title: "folio | WebArk",
   description: "A WebArk Portfolio Website",
 };
 

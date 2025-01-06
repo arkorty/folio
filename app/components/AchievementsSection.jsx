@@ -13,7 +13,7 @@ const AchievementsSection = () => {
     { metric: "Repos", value: "0", postfix: "+" },
     { metric: "Commits", value: "0", postfix: "+" },
     { metric: "Stars", value: "0", postfix: "" },
-    { metric: "Streak", value: "0", postfix: "" },
+    { metric: "Followers", value: "0", postfix: "" },
   ]);
 
   const [topLanguages, setTopLanguages] = useState([]);
@@ -25,13 +25,13 @@ const AchievementsSection = () => {
       const response = await axios.get("/api/github");
 
       if (response.status === 200) {
-        const { repos, commits, stars, languages, streak } = response.data;
+        const { repos, commits, stars, languages, followers } = response.data;
 
         setAchievements([
           { metric: "Repos", value: repos.toString(), postfix: "+" },
           { metric: "Commits", value: commits.toString(), postfix: "+" },
           { metric: "Stars", value: stars.toString(), postfix: "" },
-          { metric: "Streak", value: streak.toString(), postfix: "" },
+          { metric: "Followers", value: followers.toString(), postfix: "" },
         ]);
 
         const languageArray = Object.entries(languages)
@@ -118,12 +118,7 @@ const AchievementsSection = () => {
           {currentLanguage && (
             <div
               className="flex flex-col items-center justify-center mx-4 my-4 sm:my-0"
-              style={{
-                minWidth: "200px",
-                whiteSpace: "nowrap",
-                overflow: "hidden",
-                textOverflow: "ellipsis",
-              }}
+              style={{ minWidth: "200px" }}
             >
               <h2 className="text-white text-4xl font-bold flex flex-row">
                 {trail.map((style, i) => (

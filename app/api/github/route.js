@@ -18,6 +18,7 @@ export async function GET(request, response) {
     const headers = {
       Authorization: `Bearer ${token}`,
       Accept: "application/vnd.github.v3+json",
+      "X-GitHub-Api-Version": "2022-11-28",
     };
 
     let page = 1;
@@ -82,29 +83,12 @@ export async function GET(request, response) {
       return acc;
     }, {});
 
-    const contributionsRes = await axios.get(
-      `https://api.github.com/users/${username}/events`,
+    const followersRes = await axios.get(
+      `https://api.github.com/users/${username}/followers`,
       { headers }
     );
 
-    const now = new Date();
-    const oneYearAgo = new Date(
-      now.getFullYear() - 1,
-      now.getMonth(),
-      now.getDate()
-    );
-
-    const contributionEvents = contributionsRes.data.filter(
-      (event) =>
-        new Date(event.created_at) > oneYearAgo &&
-        (event.type === "PushEvent" ||
-          event.type === "PullRequestEvent" ||
-          event.type === "IssuesEvent")
-    );
-
-    const contributionDates = new Set(
-      contributionEvents.map((event) => event.created_at.split("T")[0])
-    );
+    const followers = followersRes.data.length;
 
     return new Response(
       JSON.stringify({
@@ -112,7 +96,7 @@ export async function GET(request, response) {
         commits: totalCommits,
         stars: totalStars,
         languages: languageStats,
-        streak: contributionDates.size,
+        followers: followers,
       }),
       {
         status: 200,

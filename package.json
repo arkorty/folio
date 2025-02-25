@@ -4,7 +4,7 @@
   "dependencies": {
     "@heroicons/react": "^2.2.0",
     "@react-spring/web": "^9.7.5",
-    "autoprefixer": "10.4.15",
+    "autoprefixer": "10.4.20",
     "axios": "^1.7.9",
     "caniuse-lite": "^1.0.30001688",
     "framer-motion": "^12.4.7",

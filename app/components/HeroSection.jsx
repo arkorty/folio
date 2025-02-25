@@ -5,13 +5,9 @@ import { TypeAnimation } from "react-type-animation";
 import { motion } from "framer-motion";
 import Link from "next/link";
 
-const Profile = () => {
+const HeroSection = () => {
   const handleResumeDownload = () => {
-    const link = document.createElement("a");
-    const filename = "A.Chakraborty-Resume-SDE.pdf";
-    link.href = "/resume/" + filename;
-    link.download = filename;
-    link.click();
+    window.location.href = "https://nextcloud.webark.in/index.php/s/78DgMS447cP2TqT";
   };
 
   return (
@@ -82,4 +78,4 @@ const Profile = () => {
   );
 };
 
-export default Profile;
+export default HeroSection;

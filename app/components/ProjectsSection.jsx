@@ -50,10 +50,9 @@ const projectsData = [
     id: 2,
     title: "ACEquity",
     description: "Hassle-free stock watchlist tracker",
-    image:
-      "https://ace.webark.in/og-image.png",
+    image: "https://ace.webark.in/og-image.png",
     tag: ["Web"],
-    gitUrl: "https://github.com/arkorty/ACEquity",
+    gitUrl: "",
     previewUrl: "https://ace.webark.in/",
   },
   {

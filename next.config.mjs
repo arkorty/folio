@@ -7,6 +7,11 @@ const nextConfig = {
         hostname: "github.com",
         pathname: "**",
       },
+      {
+        protocol: "https",
+        hostname: "*webark.in",
+        pathname: "**",
+      },
     ],
   },
 };

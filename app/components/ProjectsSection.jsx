@@ -16,7 +16,7 @@ const projectsData = [
     previewUrl: "https://booststats.webark.in/",
   },
   {
-    id: 2,
+    id: 5,
     title: "RUSTCM-CLI",
     description:
       "Authenticated cipher using XChaCha20-Poly1305 in the command-line",
@@ -38,23 +38,23 @@ const projectsData = [
   },
   {
     id: 4,
-    title: "Room",
-    description: "Multi-user room-based text editor",
+    title: "Osborne",
+    description: "Online text editor with a vintage look",
     image:
-      "https://github.com/arkorty/room-client/blob/main/public/og-image.png?raw=true",
+      "https://github.com/arkorty/osborne-client/blob/main/public/og-image.png?raw=true",
     tag: ["Web"],
-    gitUrl: "https://github.com/arkorty/Room",
+    gitUrl: "https://github.com/arkorty/Osborne",
     previewUrl: "https://room.webark.in/",
   },
   {
-    id: 5,
-    title: "CodeShare",
-    description: "Share code snippets easily with syntax highlights",
+    id: 2,
+    title: "ACEquity",
+    description: "Hassle-free stock watchlist tracker",
     image:
-      "https://github.com/arkorty/CodeShare/blob/master/blob/cover.png?raw=true",
+      "https://ace.webark.in/og-image.png",
     tag: ["Web"],
-    gitUrl: "https://github.com/arkorty/CodeShare",
-    previewUrl: "https://codeshare.webark.in/",
+    gitUrl: "https://github.com/arkorty/ACEquity",
+    previewUrl: "https://ace.webark.in/",
   },
   {
     id: 6,

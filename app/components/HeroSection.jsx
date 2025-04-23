@@ -7,7 +7,7 @@ import Link from "next/link";
 
 const HeroSection = () => {
   const handleResumeDownload = () => {
-    window.location.href = "https://nextcloud.webark.in/index.php/s/78DgMS447cP2TqT";
+    window.location.href = process.env.NEXT_PUBLIC_RESUME_URL;
   };
 
   return (

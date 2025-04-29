@@ -14,7 +14,7 @@
     "react-animated-numbers": "^1.0.0",
     "react-dom": "^19.0.0",
     "react-type-animation": "^3.2.0",
-    "resend": "^4.0.1",
+    "resend": "^4.4.1",
     "sharp": "^0.33.5",
     "tailwindcss": "3.3.3"
   },

@@ -6,7 +6,7 @@
     "@react-spring/web": "^9.7.5",
     "autoprefixer": "10.4.20",
     "axios": "^1.7.9",
-    "caniuse-lite": "^1.0.30001688",
+    "caniuse-lite": "^1.0.30001717",
     "framer-motion": "^12.4.7",
     "next": "^15.1.0",
     "postcss": "^8.4.49",

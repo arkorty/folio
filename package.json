@@ -7,7 +7,7 @@
     "autoprefixer": "10.4.20",
     "axios": "^1.7.9",
     "caniuse-lite": "^1.0.30001688",
-    "framer-motion": "^12.4.7",
+    "framer-motion": "^12.9.7",
     "next": "^15.1.0",
     "postcss": "^8.4.49",
     "react": "^19.0.0",

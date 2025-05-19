@@ -1,9 +1,11 @@
 "use client";
 
 import React, { useState } from "react";
-import GithubIcon from "../../public/github-icon.svg";
-import LinkedinIcon from "../../public/linkedin-icon.svg";
-import LeetCodeIcon from "../../public/leetcode-icon.svg";
+import GithubIcon from "../assets/github-icon.svg";
+import LinkedinIcon from "../assets/linkedin-icon.svg";
+import LeetCodeIcon from "../assets/leetcode-icon.svg";
+import MastodonIcon from "../assets/mastodon-icon.svg";
+import XDotComIcon from "../assets/xdotcom-icon.svg";
 import Link from "next/link";
 import Image from "next/image";
 
@@ -62,23 +64,12 @@ const EmailSection = () => {
           Let&apos;s Connect
         </h5>
         <p className="text-[#ADB7BE] text-justify mb-4 max-w-md">
-          I’m super excited to connect with fellow tech enthusiasts! Always
+          I'm super excited to connect with fellow tech enthusiasts! Always
           eager to share ideas, collaborate on projects, and learn together in
-          the world of programming and development. Let’s inspire each other and
+          the world of programming and development. Let's inspire each other and
           grow as a community! Feel free to reach out—whether for a chat, to
-          share something cool, or just to connect. You can find me on social
-          media sites like{" "}
-          <a className="text-blue-400" href="https://x.com/arkorty">
-            X (formerly Twitter)
-          </a>
-          ,{" "}
-          <a
-            className="text-purple-400"
-            href="https://mastodon.social/@arkorty"
-          >
-            Mastodon
-          </a>{" "}
-          or the platforms listed below.
+          share something cool, or just to connect. You can find me on various
+          social media platforms listed below.
         </p>
 
         <div className="socials flex flex-row gap-2">
@@ -90,6 +81,12 @@ const EmailSection = () => {
           </Link>
           <Link href="https://leetcode.com/arkorty">
             <Image src={LeetCodeIcon} alt="LeetCode Icon" />
+          </Link>
+          <Link href="https://mastodon.social/@arkorty">
+            <Image src={MastodonIcon} alt="Mastodon Icon" />
+          </Link>
+          <Link href="https://x.com/arkorty">
+            <Image src={XDotComIcon} alt="X.com Icon" />
           </Link>
         </div>
       </div>

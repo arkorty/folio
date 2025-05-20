@@ -140,8 +140,9 @@ const EmailSection = () => {
               id="message"
               value={formData.message}
               onChange={handleChange}
-              className="bg-[#18191E] border border-[#33353F] placeholder-[#9CA2A9] text-gray-100 text-sm rounded-lg block w-full p-2.5"
+              className="bg-[#18191E] border border-[#33353F] placeholder-[#9CA2A9] text-gray-100 text-sm rounded-lg block w-full p-2.5 resize-none"
               placeholder="Message"
+              rows={4}
             />
           </div>
           <button

@@ -3,7 +3,7 @@ import React, { useState, useRef } from "react";
 import ProjectCard from "./ProjectCard";
 import ProjectTag from "./ProjectTag";
 import { motion, useInView } from "framer-motion";
-import projectsData from "@/data/projects.json";
+import projectsData from "../data/projects.json";
 
 const ProjectsSection = () => {
   const [activeTag, setActiveTag] = useState("");

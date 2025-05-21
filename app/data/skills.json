@@ -1,0 +1,108 @@
+{
+  "about": {
+    "title": "About Me",
+    "description": "Hey! I'm Arka, a programmer who loves open-source and tinkering with Linux. I'm all about the command line, customizing systems, and getting into the nitty-gritty details. I enjoy making tech efficient, flexible, and accessible."
+  },
+  "tabs": [
+    {
+      "title": "Technical Skills",
+      "id": "tech-skills",
+      "label": "Skills",
+      "items": [
+        {
+          "name": "DevOps & Linux Server Management",
+          "description": "Expert in configuring and maintaining Linux servers with emphasis on security hardening, performance optimization, and infrastructure automation."
+        },
+        {
+          "name": "Automation via Shell Scripting",
+          "description": "Strong command of Bash and POSIX shell scripting for creating efficient automation workflows, system management tools, and deployment processes."
+        },
+        {
+          "name": "Docker Orchestration",
+          "description": "Experienced in containerizing applications, managing multi-container environments, and implementing efficient orchestration strategies."
+        },
+        {
+          "name": "Build Systems & CI/CD",
+          "description": "Intermediate experience in setting up and maintaining build pipelines using tools like Make, CMake, and Jenkins."
+        }
+      ]
+    },
+    {
+      "title": "Frameworks",
+      "id": "frameworks",
+      "label": "Frameworks",
+      "items": [
+        {
+          "name": "React & Next.js",
+          "description": "Proficient in building modern web applications with React and server-side rendering with Next.js, as evident in projects like ACEquity, BoostStats, and Osborne."
+        },
+        {
+          "name": "Chi & Echo",
+          "description": "Experience with Go web frameworks for developing high-performance APIs and backend services, used in ACEquity and Osborne projects."
+        },
+        {
+          "name": "TensorFlow & Scikit-learn",
+          "description": "Experience in implementing machine learning models for health risk prediction in the PrognosAI project."
+        },
+        {
+          "name": "Express & Node.js",
+          "description": "Backend development experience with Node.js ecosystem for projects like DownLink, BoostStats, and Reduce URL shortener."
+        },
+        {
+          "name": "Tailwind CSS",
+          "description": "Proficiency in creating responsive and modern UI designs using utility-first CSS framework across multiple web projects."
+        }
+      ]
+    },
+    {
+      "title": "Programming Languages",
+      "id": "languages",
+      "label": "Languages",
+      "items": [
+        {
+          "name": "TypeScript",
+          "description": "Practical experience in developing type-safe applications with modern front-end frameworks like React and Next.js across multiple web projects."
+        },
+        {
+          "name": "Go",
+          "description": "Beginner-level experience with a focus on building simple and efficient backends."
+        },
+        {
+          "name": "Python",
+          "description": "Proficient in Python for automation, data processing, and machine learning development as used in the PrognosAI project."
+        },
+        {
+          "name": "Rust",
+          "description": "Intermediate knowledge with a focus on systems programming and memory-safe code, used in RUSTCM-CLI for cryptographic implementations."
+        },
+        {
+          "name": "C++",
+          "description": "Intermediate experience in writing high-performance code as demonstrated in ExprEval++, with understanding of core concepts like OOP, STL, and memory management."
+        }
+      ]
+    },
+    {
+      "title": "Cloud Platforms",
+      "id": "cloud-platforms",
+      "label": "Cloud",
+      "items": [
+        {
+          "name": "AWS",
+          "description": "Have experience deploying nginx reverse proxies, containerized backends and Nextcloud instances using services like EC2 & S3."
+        },
+        {
+          "name": "Oracle Cloud",
+          "description": "Beginner knowledge in using Compute Engine and Scalable Storage."
+        },
+        {
+          "name": "Vercel",
+          "description": "Beginner experience deploying frontend applications with seamless integration of CI/CD for Next.js projects."
+        },
+        {
+          "name": "GitHub",
+          "description": "Advanced use of GitHub features for collaborative development, automation via Actions, and repository management."
+        }
+      ]
+    }
+  ]
+}

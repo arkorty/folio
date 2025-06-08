@@ -10,7 +10,7 @@ const navLinks = [
     title: "About",
     path: "/#about",
   },
-    {
+  {
     title: "Experiences",
     path: "/#experiences",
   },
@@ -21,7 +21,11 @@ const navLinks = [
   {
     title: "Contact",
     path: "/#contact",
-  }
+  },
+  {
+    title: "Blog",
+    path: "/blog",
+  },
 ];
 
 const Navbar = () => {

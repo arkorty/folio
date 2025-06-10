@@ -91,7 +91,7 @@ export default function BlogPage() {
 
                   previewHtml = previewHtml.replace(
                     /<img /g,
-                    '<img class="aspect-[4/1] object-cover my-4 rounded-md" '
+                    '<img class="hidden sm:block aspect-[4/1] object-cover my-4 rounded-md" '
                   );
                 } catch (e) {
                   console.error("Remark processing error:", e);

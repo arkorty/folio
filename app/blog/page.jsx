@@ -63,8 +63,12 @@ export default function BlogPage() {
               for (let i = 0; i < words.length && !matchFound; i++) {
                 if (words[i] && words[i].length > 3) {
                   try {
+                    const escapedWord = words[i].replace(
+                      /[.*+?^${}()|[\]\\]/g,
+                      "\\$&"
+                    );
                     const regex = new RegExp(
-                      `<p>[^<]*${words[i]}[^<]*<\/p>`,
+                      `<p>[^<]*${escapedWord}[^<]*<\/p>`,
                       "i"
                     );
                     const match = contentHtml.match(regex);

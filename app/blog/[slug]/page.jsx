@@ -7,6 +7,7 @@ import Image from "next/image";
 import Navbar from "../../components/Navbar";
 import Footer from "../../components/Footer";
 import { format } from "date-fns";
+import { ArrowLeftIcon } from "@heroicons/react/24/solid";
 
 export default function BlogPost() {
   const { slug } = useParams();
@@ -39,40 +40,41 @@ export default function BlogPost() {
   return (
     <main className="flex min-h-screen flex-col bg-[#121212]">
       <Navbar />
-      <div className="container mt-24 mx-auto px-4 md:px-12 py-4">
+      <div className="container mt-16 md:mt-24 mx-auto px-4 md:px-12 py-4">
         <Link
           href="/blog"
           className="text-amber-400 hover:text-amber-300 inline-flex items-center mb-6"
         >
-          <svg
-            xmlns="http://www.w3.org/2000/svg"
-            className="h-5 w-5 mr-1"
-            viewBox="0 0 20 20"
-            fill="currentColor"
-          >
-            <path
-              fillRule="evenodd"
-              d="M9.707 14.707a1 1 0 01-1.414 0l-4-4a1 1 0 010-1.414l4-4a1 1 0 011.414 1.414L7.414 9H15a1 1 0 110 2H7.414l2.293 2.293a1 1 0 010 1.414z"
-              clipRule="evenodd"
-            />
-          </svg>
+          <ArrowLeftIcon className="mr-2 w-6" />
           Back to Blog
         </Link>
 
         {isLoading && (
-          <div className="flex justify-center items-center py-20">
-            <div className="animate-spin rounded-full h-12 w-12 border-t-2 border-b-2 border-white"></div>
+          <div className="flex justify-center items-center py-12 md:py-20">
+            <div className="animate-spin rounded-full h-10 w-10 md:h-12 md:w-12 border-2 border-t-amber-500 border-r-transparent border-b-amber-500 border-l-transparent"></div>
           </div>
         )}
 
         {error && (
-          <div className="bg-red-900/20 border border-red-500 text-white p-4 rounded-md">
+          <div className="bg-red-900/20 border border-red-500 text-white p-3 md:p-4 rounded-md shadow-lg flex items-center">
+            <svg
+              xmlns="http://www.w3.org/2000/svg"
+              className="h-5 w-5 text-red-400 mr-2 flex-shrink-0"
+              viewBox="0 0 20 20"
+              fill="currentColor"
+            >
+              <path
+                fillRule="evenodd"
+                d="M10 18a8 8 0 100-16 8 8 0 000 16zM8.707 7.293a1 1 0 00-1.414 1.414L8.586 10l-1.293 1.293a1 1 0 101.414 1.414L10 11.414l1.293 1.293a1 1 0 001.414-1.414L11.414 10l1.293-1.293a1 1 0 00-1.414-1.414L10 8.586 8.707 7.293z"
+                clipRule="evenodd"
+              />
+            </svg>
             {error}
           </div>
         )}
 
         {!isLoading && post && (
-          <article className="max-w-4xl mx-auto">
+          <article className="max-w-3xl md:max-w-4xl mx-auto rounded-xl shadow-xl overflow-hidden backdrop-blur-sm">
             <header className="mb-8">
               <h1 className="text-3xl md:text-4xl font-bold text-white mb-4">
                 {post.metadata.title}

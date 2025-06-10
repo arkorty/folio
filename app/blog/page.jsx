@@ -124,8 +124,8 @@ export default function BlogPage() {
   return (
     <main className="flex min-h-screen flex-col bg-[#121212]">
       <Navbar />
-      <div className="container mt-24 mx-auto px-12 py-4">
-        <h1 className="text-4xl font-bold text-white mb-8">Blog</h1>
+      <div className="container mt-16 md:mt-24 mx-auto px-12 py-4">
+        <h1 className="text-xl md:text-4xl font-bold text-white mb-8">Blog</h1>
 
         {isLoading && (
           <div className="flex justify-center items-center py-10">
@@ -160,7 +160,7 @@ export default function BlogPage() {
                   <div className="bg-amber-500 rounded-full h-8 w-8 mt-1.5 flex-shrink-0 z-10"></div>
                   <Link
                     href={`/blog/${blog.slug}`}
-                    className="bg-[#1e1e1e] rounded-lg overflow-hidden hover:shadow-lg hover:shadow-amber-500/10 transition-all duration-300 w-full"
+                    className="bg-[#222222] rounded-lg overflow-hidden hover:shadow-lg hover:shadow-amber-500/10 transition-all duration-300 w-full"
                   >
                     <div className="p-6">
                       <h2 className="text-xl font-semibold text-white mb-2">

@@ -5,7 +5,7 @@
     "@heroicons/react": "^2.2.0",
     "@react-spring/web": "^9.7.5",
     "autoprefixer": "10.4.20",
-    "axios": "^1.9.0",
+    "axios": "^1.10.0",
     "caniuse-lite": "^1.0.30001718",
     "framer-motion": "^12.12.1",
     "next": "^15.3.2",

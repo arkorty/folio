@@ -8,7 +8,7 @@
     "axios": "^1.9.0",
     "caniuse-lite": "^1.0.30001718",
     "framer-motion": "^12.12.1",
-    "next": "^15.3.2",
+    "next": "^15.3.5",
     "postcss": "^8.5.3",
     "react": "^19.1.0",
     "react-animated-numbers": "^1.0.1",

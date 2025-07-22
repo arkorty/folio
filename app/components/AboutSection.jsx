@@ -1,6 +1,6 @@
 "use client";
 
-import React, { useTransition, useState } from "react";
+import React, { useTransition, useState, useEffect } from "react";
 import SolarSystemAnimation from "./CodeAnimation";
 import TabButton from "./TabButton";
 import skillsData from "../data/skills.json";
@@ -8,6 +8,22 @@ import skillsData from "../data/skills.json";
 const AboutSection = () => {
   const [tab, setTab] = useState("tech-skills");
   const [isPending, startTransition] = useTransition();
+  const [showAnimation, setShowAnimation] = useState(true);
+
+  useEffect(() => {
+    const checkAspectRatio = () => {
+      const aspectRatio = window.innerWidth / window.innerHeight;
+      setShowAnimation(aspectRatio >= 4 / 3);
+    };
+
+    checkAspectRatio();
+
+    window.addEventListener("resize", checkAspectRatio);
+
+    return () => {
+      window.removeEventListener("resize", checkAspectRatio);
+    };
+  }, []);
 
   const handleTabChange = (id) => {
     startTransition(() => {
@@ -15,7 +31,6 @@ const AboutSection = () => {
     });
   };
 
-  // Create the tab content dynamically from JSON data
   const renderTabContent = (tabId) => {
     const currentTab = skillsData.tabs.find((t) => t.id === tabId);
     if (!currentTab) return null;
@@ -34,8 +49,10 @@ const AboutSection = () => {
 
   return (
     <section className="text-white" id="about">
-      <div className="md:grid md:grid-cols-2 gap-8 items-center py-8 px-4 xl:gap-16 sm:py-16 xl:px-16">
-        <SolarSystemAnimation />
+      <div
+        className={`md:grid gap-8 items-center py-8 px-4 xl:gap-16 sm:py-16 xl:px-16 ${showAnimation ? "md:grid-cols-2" : "md:grid-cols-1"}`}
+      >
+        {showAnimation && <SolarSystemAnimation />}
         <div className="mt-4 md:mt-0 text-left flex flex-col h-full">
           <h2 className="text-4xl font-bold text-white mb-4">
             {skillsData.about.title}

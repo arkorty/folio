@@ -25,7 +25,7 @@ const ExperiencesSection = () => {
           </Link>
         </div>
         
-        <div className="col-span-3" ref={ref}>
+        <div className="col-span-3 mt-4" ref={ref}>
           {experiencesData.slice(0, 3).map((experience, index, array) => (
             <motion.div
               key={index}

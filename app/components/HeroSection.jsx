@@ -7,7 +7,7 @@ import Link from "next/link";
 
 const HeroSection = () => {
   const handleResumeDownload = () => {
-    window.location.href = process.env.NEXT_PUBLIC_RESUME_URL;
+    window.location.href = "/resume";
   };
 
   return (
@@ -44,14 +44,13 @@ const HeroSection = () => {
             My $HOME directory on the Interweb.
           </p>
           <div>
-            <Link href="mailto:arkorty@gmail.com" legacyBehavior>
-              <a
-                className="mb-3 px-6 inline-block py-3 w-fit sm:w-fit rounded-full mr-4 bg-gradient-to-br from-amber-700 to-red-500 hover:bg-slate-200 text-white"
-                target="_blank"
-                rel="noopener noreferrer"
-              >
-                Hire Me
-              </a>
+            <Link 
+              href="mailto:arkorty@gmail.com"
+              className="mb-3 px-6 inline-block py-3 w-fit sm:w-fit rounded-full mr-4 bg-gradient-to-br from-amber-700 to-red-500 hover:bg-slate-200 text-white"
+              target="_blank"
+              rel="noopener noreferrer"
+            >
+              Hire Me
             </Link>
             <button
               onClick={handleResumeDownload}

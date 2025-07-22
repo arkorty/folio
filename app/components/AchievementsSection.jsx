@@ -79,10 +79,7 @@ const AchievementsSection = () => {
 
   const trail = useTrail(letters.length, {
     to: { opacity: 1, transform: "translateY(0px)" },
-    from: {
-      opacity: 0,
-      transform: (i) => `translateY(${i % 2 === 0 ? "-20px" : "20px"})`,
-    },
+    from: { opacity: 0, transform: "translateY(-20px)" },
     config: { tension: 180, friction: 12 },
     reset: true,
   });

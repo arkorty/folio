@@ -73,19 +73,19 @@ const EmailSection = () => {
         </p>
 
         <div className="socials flex flex-row gap-2">
-          <Link href="https://github.com/arkorty">
+          <Link href="https://github.com/arkorty" target="_blank" rel="noopener noreferrer">
             <Image src={GithubIcon} alt="Github Icon" />
           </Link>
-          <Link href="https://linkedin.com/in/arkorty">
+          <Link href="https://linkedin.com/in/arkorty" target="_blank" rel="noopener noreferrer">
             <Image src={LinkedinIcon} alt="Linkedin Icon" />
           </Link>
-          <Link href="https://leetcode.com/arkorty">
+          <Link href="https://leetcode.com/arkorty" target="_blank" rel="noopener noreferrer">
             <Image src={LeetCodeIcon} alt="LeetCode Icon" />
           </Link>
-          <Link href="https://mastodon.social/@arkorty">
+          <Link href="https://mastodon.social/@arkorty" target="_blank" rel="noopener noreferrer">
             <Image src={MastodonIcon} alt="Mastodon Icon" />
           </Link>
-          <Link href="https://x.com/arkorty">
+          <Link href="https://x.com/arkorty" target="_blank" rel="noopener noreferrer">
             <Image src={XDotComIcon} alt="X.com Icon" />
           </Link>
         </div>

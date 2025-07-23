@@ -5,7 +5,7 @@ import Image from "next/image";
 
 const ProjectCard = ({ imgUrl, title, description, gitUrl, previewUrl }) => {
   return (
-    <div>
+    <div className="h-full flex flex-col">
       <div className="relative group w-full aspect-[1200/630]">
         <Image
           src={imgUrl}
@@ -36,7 +36,7 @@ const ProjectCard = ({ imgUrl, title, description, gitUrl, previewUrl }) => {
           )}
         </div>
       </div>
-      <div className="text-white rounded-b-xl bg-[#222222] py-6 px-4">
+      <div className="text-white rounded-b-xl bg-[#222222] py-6 px-4 flex-grow">
         <h5 className="text-xl font-semibold mb-2">{title}</h5>
         <p className="text-[#ADB7BE]">{description}</p>
       </div>

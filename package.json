@@ -11,7 +11,7 @@
     "axios": "^1.10.0",
     "caniuse-lite": "^1.0.30001727",
     "date-fns": "^3.6.0",
-    "framer-motion": "^12.23.6",
+    "framer-motion": "^12.23.12",
     "gray-matter": "^4.0.3",
     "next": "^15.4.3",
     "postcss": "^8.5.6",

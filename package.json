@@ -9,7 +9,7 @@
     "@types/react": "^19.1.8",
     "autoprefixer": "10.4.20",
     "axios": "^1.10.0",
-    "caniuse-lite": "^1.0.30001727",
+    "caniuse-lite": "^1.0.30001734",
     "date-fns": "^3.6.0",
     "framer-motion": "^12.23.6",
     "gray-matter": "^4.0.3",

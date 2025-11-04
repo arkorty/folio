@@ -50,8 +50,13 @@ export default function BlogPost() {
         </Link>
 
         {isLoading && (
-          <div className="flex justify-center items-center py-12 md:py-20">
-            <div className="animate-spin rounded-full h-10 w-10 md:h-12 md:w-12 border-2 border-t-amber-500 border-r-transparent border-b-amber-500 border-l-transparent"></div>
+          <div className="py-12 md:py-20">
+            <div className="w-full max-w-3xl md:max-w-4xl mx-auto">
+              <div className="h-1 bg-[#33353F] rounded-full overflow-hidden">
+                <div className="h-full bg-gradient-to-r from-amber-500 to-amber-600 animate-progress"></div>
+              </div>
+              <p className="text-center text-[#ADB7BE] mt-4">Loading blog post...</p>
+            </div>
           </div>
         )}
 

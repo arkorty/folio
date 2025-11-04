@@ -2,6 +2,7 @@ import axios from "axios";
 import matter from "gray-matter";
 import { remark } from "remark";
 import html from "remark-html";
+import remarkGfm from "remark-gfm";
 
 export async function GET(request, { params }) {
   const { slug } = params;
@@ -60,6 +61,7 @@ export async function GET(request, { params }) {
     const { data: frontMatter, content } = matter(fileContent);
 
     const processedContent = await remark()
+      .use(remarkGfm)
       .use(html, { sanitize: false })
       .process(content);
     const contentHtml = processedContent.toString();

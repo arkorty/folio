@@ -110,3 +110,42 @@ body {
   font-style: italic;
   margin: 1.5em 0;
 }
+
+.prose table {
+  width: 100%;
+  border-collapse: collapse;
+  margin: 1.5em 0;
+  overflow-x: auto;
+  display: block;
+}
+
+.prose thead {
+  background-color: #18191E;
+  border-bottom: 2px solid #f59e0b;
+}
+
+.prose th {
+  padding: 0.75em 1em;
+  text-align: left;
+  font-weight: 600;
+  color: #ffffff;
+  border: 1px solid #33353F;
+}
+
+.prose td {
+  padding: 0.75em 1em;
+  border: 1px solid #33353F;
+  color: #d4d4d4;
+}
+
+.prose tbody tr:nth-child(even) {
+  background-color: #121212;
+}
+
+.prose tbody tr:nth-child(odd) {
+  background-color: #18191E;
+}
+
+.prose tbody tr:hover {
+  background-color: #222222;
+}

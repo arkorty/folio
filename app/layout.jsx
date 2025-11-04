@@ -16,15 +16,14 @@ export default function RootLayout({ children }) {
         <meta name="description" content={metadata.description} />
         <meta name="viewport" content="width=device-width, initial-scale=1.0" />
         <meta charSet="UTF-8" />
-
         <meta property="og:type" content="website" />
         <meta property="og:title" content={metadata.title} />
         <meta property="og:site_name" content={metadata.title} />
         <meta property="og:description" content={metadata.description} />
-        <meta property="og:url" content="https://folio.webark.in" />
+        <meta property="og:url" content="https://www.webark.in" />
         <meta
           property="og:image"
-          content="https://folio.webark.in/og-image.png"
+          content="https://www.webark.in/og-image.png"
         />
         <meta property="og:locale" content="en_US" />
 
@@ -33,7 +32,7 @@ export default function RootLayout({ children }) {
         <meta name="twitter:description" content={metadata.description} />
         <meta
           name="twitter:image"
-          content="https://folio.webark.in/og-image.png"
+          content="https://www.webark.in/og-image.png"
         />
         <meta name="twitter:creator" content="@arkorty" />
 
@@ -67,7 +66,7 @@ export default function RootLayout({ children }) {
         />
         <link rel="manifest" href="/site.webmanifest" />
 
-        <link rel="canonical" href="https://folio.webark.in" />
+        <link rel="canonical" href="https://www.webark.in" />
 
         <meta name="robots" content="index, follow" />
         <meta

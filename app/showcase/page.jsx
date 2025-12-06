@@ -36,28 +36,91 @@ export default function WebsitesPage() {
     websitesData.websites[0]
   );
   const [isLoading, setIsLoading] = useState(true);
+  const [focusedCardIndex, setFocusedCardIndex] = useState(null);
   const scrollContainerRef = useRef(null);
+  const scrollTimeoutRef = useRef(null);
+  const isUserScrollingRef = useRef(false);
 
   const handleWebsiteChange = (website) => {
     setSelectedWebsite(website);
     setIsLoading(true);
   };
 
-  const scrollToWebsite = (index) => {
-    if (scrollContainerRef.current) {
-      const container = scrollContainerRef.current;
-      const cards = container.querySelectorAll('.website-card');
-      if (cards[index]) {
-        cards[index].scrollIntoView({ behavior: 'smooth', inline: 'start', block: 'nearest' });
+  const updateActiveWebsite = () => {
+    if (!scrollContainerRef.current || !isUserScrollingRef.current) return;
+    
+    const container = scrollContainerRef.current;
+    const cards = container.querySelectorAll('.website-card');
+    const containerRect = container.getBoundingClientRect();
+    const containerCenter = containerRect.left + containerRect.width / 2;
+    
+    let closestIndex = 0;
+    let closestDistance = Infinity;
+    
+    cards.forEach((card, index) => {
+      const cardRect = card.getBoundingClientRect();
+      const cardCenter = cardRect.left + cardRect.width / 2;
+      const distance = Math.abs(containerCenter - cardCenter);
+      
+      if (distance < closestDistance) {
+        closestDistance = distance;
+        closestIndex = index;
       }
+    });
+    
+    const newWebsite = websitesData.websites[closestIndex];
+    if (selectedWebsite.id !== newWebsite.id) {
+      setSelectedWebsite(newWebsite);
+    }
+  };
+
+  const handleScroll = () => {
+    // Mark that user is scrolling
+    isUserScrollingRef.current = true;
+    
+    // Clear focus when scrolling
+    setFocusedCardIndex(null);
+    
+    // Clear existing timeout
+    if (scrollTimeoutRef.current) {
+      clearTimeout(scrollTimeoutRef.current);
+    }
+    
+    // Debounce the update to avoid rapid state changes
+    scrollTimeoutRef.current = setTimeout(() => {
+      updateActiveWebsite();
+      isUserScrollingRef.current = false;
+    }, 150);
+  };
+
+  const scrollToWebsite = (index) => {
+    if (!scrollContainerRef.current) return;
+    
+    // Prevent scroll handler from updating state during programmatic scroll
+    isUserScrollingRef.current = false;
+    
+    // Clear any pending scroll updates
+    if (scrollTimeoutRef.current) {
+      clearTimeout(scrollTimeoutRef.current);
+    }
+    
+    const container = scrollContainerRef.current;
+    const cards = container.querySelectorAll('.website-card');
+    
+    if (cards[index]) {
       setSelectedWebsite(websitesData.websites[index]);
+      cards[index].scrollIntoView({ 
+        behavior: 'smooth', 
+        inline: 'start', 
+        block: 'nearest' 
+      });
     }
   };
 
   return (
-    <main className="flex flex-col h-screen bg-[#121212] overflow-hidden">
+    <main className="flex flex-col h-[100dvh] bg-[#121212] overflow-hidden fixed inset-0">
       <Navbar />
-      <div className="flex-1 px-4 py-4 mt-4 pt-20 overflow-hidden">
+      <div className="flex-1 px-4 mt-4 py-4 pt-20 overflow-hidden min-h-0">
         {/* Desktop Layout */}
         <div className="hidden md:flex h-full gap-3 max-w-[calc(100vw-2rem)] mx-auto">
           {/* Sidebar */}
@@ -122,13 +185,21 @@ export default function WebsitesPage() {
         {/* Mobile Layout */}
         <div className="md:hidden h-full flex flex-col gap-3">
           {/* Horizontal Scroll Container */}
-          <div className="flex-1 overflow-x-auto overflow-y-hidden scrollbar-hide snap-x snap-mandatory" ref={scrollContainerRef}>
-            <div className="flex gap-3 h-full">
-              {websitesData.websites.map((website) => (
+          <div 
+            className="flex-1 overflow-x-auto overflow-y-hidden scrollbar-hide snap-x snap-mandatory touch-pan-x" 
+            ref={scrollContainerRef}
+            onScroll={handleScroll}
+          >
+            <div className="flex gap-3 h-full px-[4vw]">
+              {websitesData.websites.map((website, index) => (
                 <div
                   key={website.id}
-                  className="website-card flex-shrink-0 w-[92vw] bg-[#181818] border border-[#33353F] rounded-xl overflow-hidden shadow-xl relative snap-start"
-                  onClick={() => handleWebsiteChange(website)}
+                  className="website-card flex-shrink-0 w-[92vw] bg-[#181818] border border-[#33353F] rounded-xl overflow-hidden shadow-xl relative snap-center touch-pan-x"
+                  onClick={() => {
+                    if (focusedCardIndex !== index) {
+                      setFocusedCardIndex(index);
+                    }
+                  }}
                 >
                   {isLoading && selectedWebsite.id === website.id && (
                     <div className="absolute inset-0 flex items-center justify-center z-10 bg-[#0a0a0a]">
@@ -137,7 +208,9 @@ export default function WebsitesPage() {
                   )}
                   <iframe
                     src={website.url}
-                    className="w-full h-full rounded-xl pointer-events-none"
+                    className={`w-full h-full rounded-xl ${
+                      focusedCardIndex === index ? "pointer-events-auto" : "pointer-events-none"
+                    }`}
                     title={website.title}
                     sandbox="allow-scripts allow-same-origin allow-forms allow-popups allow-popups-to-escape-sandbox"
                     onLoad={() => selectedWebsite.id === website.id && setIsLoading(false)}
@@ -151,7 +224,6 @@ export default function WebsitesPage() {
                       rel="noopener noreferrer"
                       className="flex items-center justify-center w-10 h-10 bg-gradient-to-br from-amber-700 to-red-500 hover:opacity-90 text-white rounded-lg transition-all duration-300 shadow-lg backdrop-blur-sm"
                       title="Visit Site"
-                      onClick={(e) => e.stopPropagation()}
                     >
                       <EyeIcon className="h-5 w-5" />
                     </Link>
@@ -162,16 +234,10 @@ export default function WebsitesPage() {
                         rel="noopener noreferrer"
                         className="flex items-center justify-center w-10 h-10 bg-[#181818]/90 backdrop-blur-sm border border-[#ADB7BE] hover:border-white text-[#ADB7BE] hover:text-white rounded-lg transition-all duration-300 shadow-lg"
                         title="View Code"
-                        onClick={(e) => e.stopPropagation()}
                       >
                         <CodeBracketIcon className="h-5 w-5" />
                       </Link>
                     )}
-                  </div>
-
-                  {/* Website Title Badge */}
-                  <div className="absolute top-4 left-4 bg-[#181818]/90 backdrop-blur-sm px-3 py-1.5 rounded-lg border border-[#33353F] z-20">
-                    <h3 className="text-sm font-semibold text-white">{website.title}</h3>
                   </div>
                 </div>
               ))}

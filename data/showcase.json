@@ -1,0 +1,52 @@
+{
+  "websites": [
+    {
+      "id": 0,
+      "title": "Travox",
+      "description": "B2B Travel Management Platform",
+      "url": "https://t.z.webark.in/",
+      "image": "",
+      "gitUrl": ""
+    },
+    {
+      "id": 1,
+      "title": "ACEquity",
+      "description": "Hassle-free stock watchlist tracker",
+      "url": "https://ace.webark.in/",
+      "image": "https://ace.webark.in/og-image.png",
+      "gitUrl": ""
+    },
+    {
+      "id": 2,
+      "title": "Billit",
+      "description": "Invoicing for Small Businesses",
+      "url": "https://billit.webark.in/",
+      "image": "",
+      "gitUrl": ""
+    },
+    {
+      "id": 3,
+      "title": "Osborne",
+      "description": "Online text editor with a vintage look",
+      "url": "https://o.webark.in/",
+      "image": "https://o.webark.in/og-image.png",
+      "gitUrl": "https://github.com/arkorty/Osborne"
+    },
+    {
+      "id": 4,
+      "title": "Reduce",
+      "description": "URL shortner with QR code",
+      "url": "https://r.webark.in/",
+      "image": "https://github.com/arkorty/Reduce/blob/master/blob/cover.png?raw=true",
+      "gitUrl": "https://github.com/arkorty/Reduce"
+    },
+    {
+      "id": 5,
+      "title": "DownLink",
+      "description": "Download videos from YouTube and Instagram",
+      "url": "https://downlink.webark.in/",
+      "image": "https://github.com/arkorty/DownLink/blob/master/blob/cover.png?raw=true",
+      "gitUrl": "https://github.com/arkorty/DownLink"
+    }
+  ]
+}

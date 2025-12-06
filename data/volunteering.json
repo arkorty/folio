@@ -1,0 +1,26 @@
+[
+  {
+    "id": 3,
+    "title": "Backend Developer - Kolkata, India",
+    "company": "Hack4Bengal",
+    "date": "December 2024 - Present",
+    "description": "Contributing to backend development for hackathon organizing platform, focusing on building scalable and reliable systems to support participant registration, project submissions, and judging processes.",
+    "skills": ["API Development", "Backend Development", "Database Design", "Authentication Systems"]
+  },
+  {
+    "id": 2,
+    "title": "Open Source Lead - Kolkata, India",
+    "company": "Google Developer Groups (GDG) UEM Kolkata",
+    "date": "October 2024 - Present",
+    "description": "Leading open source initiatives and promoting collaborative development practices within the university community. Organizing workshops and events to introduce students to open source contribution and development methodologies.",
+    "skills": ["Open Source", "Community Building", "Git", "Team Leadership", "Event Organization"]
+  },
+  {
+    "id": 1,
+    "title": "Tech Event Coordinator - Kolkata, India",
+    "company": "University Web Development Event",
+    "date": "2024",
+    "description": "Coordinated web development events at the university level, managing logistics, participant registration, and technical requirements. Facilitated workshops and competitions to enhance students' web development skills.",
+    "skills": ["Event Management", "Web Development", "Team Coordination", "Technical Support"]
+  }
+]

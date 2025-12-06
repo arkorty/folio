@@ -1,8 +1,9 @@
 "use client";
-import React, { useState, useRef } from "react";
+import React, { useRef } from "react";
 import ExperienceItem from "./ExperienceItem";
 import Link from "next/link";
 import { motion, useInView } from "framer-motion";
+import { ChevronDownIcon } from "@heroicons/react/24/outline";
 import experiencesData from "../../data/experiences.json";
 
 const ExperiencesSection = () => {
@@ -40,10 +41,23 @@ const ExperiencesSection = () => {
                 date={experience.date}
                 description={experience.description}
                 skills={experience.skills}
+                location={experience.location}
                 isLast={index === array.length - 1}
               />
             </motion.div>
           ))}
+          {experiencesData.length > 3 && (
+            <div className="text-center">
+              <Link href="/experiences" className="flex justify-center">
+                <motion.div
+                  animate={{ y: [0, -10, 0] }}
+                  transition={{ duration: 1, repeat: Infinity }}
+                >
+                  <ChevronDownIcon className="w-8 h-8 text-gray-500 hover:text-orange-500 transition-colors" />
+                </motion.div>
+              </Link>
+            </div>
+          )}
         </div>
       </div>
     </section>

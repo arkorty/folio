@@ -1,6 +1,6 @@
 import React from "react";
 
-const ExperienceItem = ({ title, company, date, description, skills, isLast = false }) => {
+const ExperienceItem = ({ title, company, date, description, skills, location, isLast = false }) => {
   const handleSkillClick = (skill) => {
     window.open(`https://www.google.com/search?q=${encodeURIComponent(skill)}`, '_blank');
   };
@@ -12,7 +12,10 @@ const ExperienceItem = ({ title, company, date, description, skills, isLast = fa
         <span className="text-gray-400">{date}</span>
       </div>
       <h4 className="text-lg font-semibold text-[#ADB7BE] mb-2">{company}</h4>
-      <p className="text-[#ADB7BE] mb-4">{description}</p>
+      <p className="text-sm text-gray-400 mb-2">{location}</p>
+      <ul className="text-[#ADB7BE] mb-4 list-disc list-inside space-y-1">
+        {description.map((item, idx) => <li key={idx}>{item}</li>)}
+      </ul>
       <div className="flex flex-wrap gap-2">
         {skills.map((skill, index) => (
           <span 

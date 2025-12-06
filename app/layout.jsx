@@ -4,7 +4,7 @@ import { Inter } from "next/font/google";
 const inter = Inter({ subsets: ["latin"] });
 
 export const metadata = {
-  title: "folio | WebArk",
+  title: "portfolio | WebArk",
   description: "A WebArk Portfolio Website",
 };
 
@@ -71,7 +71,7 @@ export default function RootLayout({ children }) {
         <meta name="robots" content="index, follow" />
         <meta
           name="keywords"
-          content="Portfolio, Web Development, Projects, Showcase, folio"
+          content="Portfolio, Web Development, Projects, Showcase, portfolio"
         />
         <meta name="author" content="Arkaprabha Chakraborty" />
       </head>

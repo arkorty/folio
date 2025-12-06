@@ -23,6 +23,10 @@ const navLinks = [
     path: "/#contact",
   },
   {
+    title: "Websites",
+    path: "/websites",
+  },
+  {
     title: "Blog",
     path: "/blog",
   },
@@ -38,7 +42,7 @@ const Navbar = () => {
           href={"/"}
           className="text-2xl md:text-5xl text-white font-semibold"
         >
-          folio
+          portfolio
         </Link>
         <div className="mobile-menu block md:hidden">
           {!navbarOpen ? (

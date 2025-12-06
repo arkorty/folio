@@ -1,42 +1,90 @@
 [
   {
-    "id": 5,
-    "title": "Full Stack Engineer",
+    "id": 4,
+    "title": "Platform Engineer | Internship",
     "company": "Rad Media Solutions",
-    "date": "April 2025 - Present",
-    "description": "Collaborated on client projects using Angular, React, and Express. Contributed to e-commerce platforms, brand websites, and responsive hotel booking websites. Assisted with DevOps on Linux servers using Nginx.",
-    "skills": ["Angular.js", "React.js", "Express.js", "Nginx", "Linux", "Node.js", "Git", "GitHub"]
-  },
-  {
-    "id": 1,
-    "title": "Backend Engineer",
-    "company": "Buildora.io",
-    "date": "January 2025 - March 2025",
-    "description": "Worked on a platform to host events, conduct hackathons, and build communities. Developed the authentication layer, specifically implementing OAuth 2.0 and email verification systems. Enhanced an existing real-time communication portal based on client requirements, resulting in high client satisfaction.",
-    "skills": ["OAuth 2.0", "API Development", "Authentication", "Backend Engineering", "Real-time Systems"]
-  },
-  {
-    "id": 2,
-    "title": "Backend Engineer",
-    "company": "Hack4Bengal",
-    "date": "December 2024 - Present",
-    "description": "Contributing to backend development for hackathon organizing platform, focusing on building scalable and reliable systems to support participant registration, project submissions, and judging processes.",
-    "skills": ["API Development", "Backend Engineering", "Database Design", "Authentication Systems"]
+    "location": "Kolkata, India | Remote",
+    "date": "October 2025 - Present",
+    "description": [
+      "Delivered a full-featured e-commerce website with secure PayPal payment integration.",
+      "Implemented modular architecture to promote code reusability and maintainability across multiple projects.",
+      "Led backend development using FastAPI, optimizing API performance for the frontend."
+    ],
+    "skills": [
+      "Angular",
+      "React",
+      "Next.js",
+      "Express",
+      "Node.js",
+      "MongoDB",
+      "Docker",
+      "Linux",
+      "Git",
+      "FastAPI",
+      "PayPal API",
+      "GitHub Actions"
+    ]
   },
   {
     "id": 3,
-    "title": "Open Source Lead",
-    "company": "Google Developer Groups (GDG) UEM Kolkata",
-    "date": "October 2024 - Present",
-    "description": "Leading open source initiatives and promoting collaborative development practices within the university community. Organizing workshops and events to introduce students to open source contribution and development methodologies.",
-    "skills": ["Open Source", "Community Building", "Git", "Team Leadership", "Event Organization"]
+    "title": "Full Stack Developer | Internship",
+    "company": "Kumba.ai",
+    "location": "Dubai, UAE | Remote",
+    "date": "July 2025 - October 2025",
+    "description": [
+      "Migrated error tracking for multiple FastAPI microservices with zero-downtime.",
+      "Optimized CI/CD pipeline on GCP Cloud Run.",
+      "Implemented a hot-swappable logging system with PostHog and Sentry.",
+      "Optimized caching and prevented N+1 database queries."
+    ],
+    "skills": [
+      "Image Generation",
+      "FastAPI",
+      "GCP",
+      "PostHog",
+      "Sentry",
+      "Next.js",
+      "CI/CD",
+      "Redis",
+      "MongoDB"
+    ]
   },
   {
-    "id": 4,
-    "title": "Tech Event Coordinator",
-    "company": "University Web Development Event",
-    "date": "2024",
-    "description": "Coordinated web development events at the university level, managing logistics, participant registration, and technical requirements. Facilitated workshops and competitions to enhance students' web development skills.",
-    "skills": ["Event Management", "Web Development", "Team Coordination", "Technical Support"]
+    "id": 2,
+    "title": "Full Stack Developer | Freelance",
+    "company": "PredictGrowth",
+    "location": "Bengaluru, India | Remote",
+    "date": "July 2025 - July 2025",
+    "description": [
+      "Developed responsive UI for AI-powered tool using React and Tailwind, delivered within 1 month.",
+      "Collaborated with design and backend teams for pixel-perfect components and seamless API integration.",
+      "Converted Figma mockups to production code, ensuring design consistency and usability.",
+      "Adapted rapidly to evolving requirements, meeting dynamic business needs efficiently."
+    ],
+    "skills": ["React", "TypeScript", "Tailwind CSS", "Node.js", "Figma"]
+  },
+  {
+    "id": 1,
+    "title": "Backend Developer | Internship",
+    "company": "Rad Media Solutions",
+    "location": "Kolkata, India | Remote",
+    "date": "April 2025 - July 2025",
+    "description": [
+      "Handled diverse client projects, including e-commerce platforms, ERPs, etc.",
+      "Completed 5+ client projects deployments on self-managed VPS and maintained minimal downtime.",
+      "Increased deployment capacity by optimizing resource usage.",
+      "Spearheaded a complete version update of an existing ERP system."
+    ],
+    "skills": [
+      "Angular",
+      "React",
+      "Next.js",
+      "Express",
+      "Node.js",
+      "MongoDB",
+      "Docker",
+      "Linux",
+      "Git"
+    ]
   }
 ]

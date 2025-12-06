@@ -12,6 +12,11 @@ const nextConfig = {
         hostname: "*webark.in",
         pathname: "**",
       },
+      {
+        protocol: "https",
+        hostname: "v1.screenshot.11ty.dev",
+        pathname: "/**",
+      }
     ],
   },
 };

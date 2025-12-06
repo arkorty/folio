@@ -13,7 +13,7 @@ export default function Experiences() {
     ? experiencesData.filter(exp => 
         exp.title.toLowerCase().includes(searchTerm.toLowerCase()) ||
         exp.company.toLowerCase().includes(searchTerm.toLowerCase()) ||
-        exp.description.toLowerCase().includes(searchTerm.toLowerCase()) ||
+        exp.description.some(desc => desc.toLowerCase().includes(searchTerm.toLowerCase())) ||
         exp.skills.some(skill => skill.toLowerCase().includes(searchTerm.toLowerCase()))
       )
     : experiencesData;
@@ -55,6 +55,7 @@ export default function Experiences() {
                   date={experience.date}
                   description={experience.description}
                   skills={experience.skills}
+                  location={experience.location}
                   isLast={index === array.length - 1}
                 />
               </motion.div>
